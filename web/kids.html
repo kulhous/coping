@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kartičky zvládání</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="kids.css" />
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="hero">
+      <h1 id="site-title">🌈 Kartičky zvládání</h1>
+      <p id="site-lead">Vyber si, co se ti teď hodí. Klikni a rozbal.</p>
+      <div class="header-row">
+        <div class="lang-toggle" role="group" id="lang-group">
+          <button type="button" id="lang-cs" aria-pressed="true">🇨🇿 Čeština</button>
+          <button type="button" id="lang-en" aria-pressed="false">🇬🇧 English</button>
+        </div>
+        <a href="index.html" class="pro-link" id="pro-link">📋 Odborný přehled</a>
+      </div>
+    </header>
+
+    <!-- ===== Filter bubbles ===== -->
+    <section class="age-bar" id="age-filter">
+      <span class="age-label" id="bub-age-label">🎂 Kolik mi je?</span>
+      <div class="age-tray" id="chips-age">
+        <button type="button" class="chip" data-val="" aria-pressed="true" id="age-all">Vše</button>
+        <button type="button" class="chip" data-val="8" aria-pressed="false">8</button>
+        <button type="button" class="chip" data-val="9" aria-pressed="false">9</button>
+        <button type="button" class="chip" data-val="10" aria-pressed="false">10</button>
+        <button type="button" class="chip" data-val="11" aria-pressed="false">11</button>
+        <button type="button" class="chip" data-val="12" aria-pressed="false">12</button>
+        <button type="button" class="chip" data-val="13" aria-pressed="false">13</button>
+        <button type="button" class="chip" data-val="14" aria-pressed="false">14</button>
+        <button type="button" class="chip" data-val="15" aria-pressed="false">15</button>
+        <button type="button" class="chip" data-val="16" aria-pressed="false">16</button>
+        <button type="button" class="chip" data-val="17" aria-pressed="false">17</button>
+        <button type="button" class="chip" data-val="18" aria-pressed="false">18</button>
+      </div>
+    </section>
+
+    <section class="bubbles" id="filters">
+      <div class="bubble" id="bub-modality" data-dim="modality">
+        <span class="bubble-label" id="bub-modality-label">🎯 Co chci dělat?</span>
+        <div class="bubble-tray" id="chips-modality"></div>
+      </div>
+      <div class="bubble" id="bub-state" data-dim="state">
+        <span class="bubble-label" id="bub-state-label">💭 Co cítím?</span>
+        <div class="bubble-tray" id="chips-state"></div>
+      </div>
+      <div class="bubble" id="bub-energy" data-dim="energy">
+        <span class="bubble-label" id="bub-energy-label">🔋 Kolik mám síly?</span>
+        <div class="bubble-tray" id="chips-energy"></div>
+      </div>
+    </section>
+
+    <div class="count-bar"><span class="count" id="count"></span></div>
+
+    <!-- ===== Card grid ===== -->
+    <main class="grid" id="grid" aria-live="polite"></main>
+
+    <!-- ===== Empty state ===== -->
+    <p class="empty" id="empty" hidden></p>
+
+    <!-- ===== Detail dialog ===== -->
+    <dialog id="detail" aria-labelledby="detail-nickname">
+      <div class="dialog-color" id="detail-color">
+        <div class="dialog-header-inner">
+          <h2 class="dialog-nickname" id="detail-nickname"></h2>
+          <button type="button" class="btn-close-icon" id="detail-close" aria-label="Zavřít">✕</button>
+        </div>
+        <div class="dialog-meta" id="detail-meta"></div>
+      </div>
+      <div class="dialog-scroll">
+        <div class="dialog-body">
+          <h3 id="detail-headline"></h3>
+          <div class="dialog-text" id="detail-text"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+      <p id="footer-text">
+        V akutní krizi kontaktuj Linku bezpečí —
+        <strong>116&nbsp;111</strong> (zdarma) ·
+        <a href="https://chat.linkabezpeci.cz" target="_blank" rel="noopener">chat.linkabezpeci.cz</a> 💚
+      </p>
+    </footer>
+
+    <script src="kids.js" type="module"></script>
+  </body>
+</html>

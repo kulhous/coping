@@ -1,0 +1,873 @@
+[
+  {
+    "id": "s04",
+    "nickname": "Silná chuť",
+    "nickname_en": "Sour Candy",
+    "color": "#f2bfab",
+    "related": [
+      "S04"
+    ],
+    "headline_cs": "Mám chuť si ublížit.",
+    "headline_en": "I want to hurt myself.",
+    "body_cs": "**Silná chuť**\n\nDostal/a ses do stavu, že nic necítíš? Máš nutkání si nějak ublížit, abys věděl/a, že jsi naživu? Běž do kuchyně a ukousni si kousek citronu nebo si dej do pusy tu nejkyselejší bonbónovou žížalu, jakou najdeš. Nech tu kyselost úplně zaplnit tvou pusu a soustřeď se jen na tu ostrou chuť, která tě štípne na jazyku. Je v pořádku, že se cítíš prázdný/á, tohle tě na chvíli vrátí zpátky. Nos u sebe pár kyselých bonbónů pro případ, že to na tebe přijde třeba ve škole.",
+    "body_en": "**Sour Candy**\n\nTry this when you're feeling: dissociation/feeling unreal; urge to self-harm; sadness/numbness. You'll need: Sour candy, lemon, strong mint, spicy gum.\n\nIntense gustatory stimulation provides immediate sensory interrupt; activates trigeminal nerve → shifts attention from emotional to physical sensation without causing harm\n\nThis works because intense gustatory stimulation provides immediate sensory interrupt; activates trigeminal nerve → shifts attention from emotional to physical sensation without causing harm You can do this anywhere (discreet).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "s05",
+    "nickname": "Studená voda",
+    "nickname_en": "Cold Splash",
+    "color": "#f2bfab",
+    "related": [
+      "S05"
+    ],
+    "headline_cs": "Mám chuť si ublížit.",
+    "headline_en": "I want to hurt myself.",
+    "body_cs": "**Studená voda**\n\nJsi plný/á vzteku a máš chuť si ublížit? Přepadla tě nečekaná a obrovská panika? Běž do koupelny a pusť si ledovou vodu z kohoutku. Opláchni si s ní obličej, nebo si namoč zápěstí a chvíli je tam nech. Pokud máš po ruce mokrý studený ručník, můžeš si ho na chvíli přiložit na tváře. Vnímej, jak tě ten chlad najednou probere. Kdykoliv to na tebe přijde, tahle rychlá ledová brzda ti může pomoct.",
+    "body_en": "**Cold Splash**\n\nTry this when you're feeling: acute panic; anger/rage; urge to self-harm. You'll need: Access to cold water (sink, water bottle).\n\nMild cold on wrists/cheeks activates mammalian dive reflex → rapid parasympathetic shift; reduces heart rate. NOTE: gentle application only, not shock/immersion\n\nThis works because mild cold on wrists/cheeks activates mammalian dive reflex → rapid parasympathetic shift; reduces heart rate. note: gentle application only, not shock/immersion You can do this needs water access (bathroom, kitchen).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b05",
+    "nickname": "Motýlí objetí",
+    "nickname_en": "Butterfly Hug",
+    "color": "#ddd5ea",
+    "related": [
+      "B05"
+    ],
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared.",
+    "body_cs": "**Motýlí objetí**\n\nDostal/a ses do stavu, že nic necítíš? Máš pocit, že se svět kolem tebe zbláznil a ty jsi úplně mimo? Překřiž si ruce na hrudníku tak, aby se tvoje prsty dotýkaly ramen pod klíční kostí. Zavři oči a začni střídavě plácat pravou a levou rukou do ramen, jako když motýl mává křídly. Plácej se pomalu a rytmicky, dokud neucítíš, že se trochu zklidňuješ. Můžeš si to udělat nenápadně i ve škole pod mikinou, kdykoliv budeš potřebovat. ❤️",
+    "body_en": "**Butterfly Hug**\n\nTry this when you're feeling: acute panic; dissociation/feeling unreal; sadness/numbness; urge to self-harm. You'll need: Nothing.\n\nBilateral stimulation engages both hemispheres; loads working memory → reduces vividness/emotional charge of distressing material; activates parasympathetic NS\n\nThis works because bilateral stimulation engages both hemispheres; loads working memory → reduces vividness/emotional charge of distressing material; activates parasympathetic ns You can do this anywhere (discreet enough for school).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b10",
+    "nickname": "Pevné objetí",
+    "nickname_en": "Self-Hug",
+    "color": "#ddd5ea",
+    "related": [
+      "B10"
+    ],
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared.",
+    "body_cs": "**Pevné objetí**\n\nPřijde ti, že jsi na všechno úplně sám/sama? Cítíš se odpojený/á a je ti hrozně? Obejmi se tak pevně, jak to jen dokážeš. Omotej si ruce kolem těla a pořádně se zmáčkni, jako by tě držel někdo, koho máš opravdu rád/a. Zůstaň takhle a pomalu dýchej. Tvoje tělo potřebuje cítit, že je v bezpečí, a ty mu to teď dáváš. Pamatuj si, že tu pro sebe vždycky budeš. ❤️",
+    "body_en": "**Self-Hug**\n\nTry this when you're feeling: acute panic; dissociation/feeling unreal; loneliness; sadness/numbness. You'll need: Nothing.\n\nFirm pressure on torso activates deep touch pressure receptors → releases oxytocin; provides containment signal to nervous system\n\nThis works because firm pressure on torso activates deep touch pressure receptors → releases oxytocin; provides containment signal to nervous system You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "c01",
+    "nickname": "Barvy pocitů",
+    "nickname_en": "Color My Mood",
+    "color": "#f5d0d8",
+    "related": [
+      "C01"
+    ],
+    "headline_cs": "Jsem úplně mimo.",
+    "headline_en": "I'm completely spaced out.",
+    "body_cs": "**Barvy pocitů**\n\nPohlcují tě temné myšlenky a propadáš se do smutku? Cítíš se trapně, nebo tě ničí úzkost a vztek? Vezmi si čistý papír, pastelky, fixy nebo obyčejnou tužku. Vyber barvy, které podle tebe odpovídají tomu, jak se zrovna cítíš, a začni prostě čmárat na papír. Nemusí to být vůbec nic konkrétního, jen čáry, fleky a barvy, které z tebe tu náladu dostanou ven. Až budeš mít hotovo, zkus to ukázat někomu, komu věříš. ❤️",
+    "body_en": "**Color My Mood**\n\nTry this when you're feeling: sadness/numbness; anger/rage; diffuse anxiety; shame; rumination. You'll need: Paper/sketchbook + pencils/markers/crayons.\n\nExternalization of internal emotional state through visual metaphor; engages right hemisphere; provides symbolic distance from overwhelming feelings; activates creative flow state\n\nThis works because externalization of internal emotional state through visual metaphor; engages right hemisphere; provides symbolic distance from overwhelming feelings; activates creative flow state You can do this anywhere with surface (home, school).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "c10",
+    "nickname": "Mapa těla",
+    "nickname_en": "Body Map",
+    "color": "#f5d0d8",
+    "related": [
+      "C10"
+    ],
+    "headline_cs": "Jsem úplně mimo.",
+    "headline_en": "I'm completely spaced out.",
+    "body_cs": "**Mapa těla**\n\nPřijde ti, že jsi odpojený/á od reality a necítíš se ve vlastním těle? Jsi plný/á smutku, úzkosti nebo vzteku? Vezmi si co největší papír a pastelky. Nakresli na něj obrys lidského těla a zkus do něj vybarvit, kde přesně cítíš ten vztek nebo smutek. Může to být červená skvrna na hrudníku nebo černá čára přes hlavu. Kresli tak dlouho, dokud ta mapa nebude ukazovat všechno, co v tobě je. Až to budeš mít, můžeš svou mapu ukázat někomu, komu věříš.",
+    "body_en": "**Body Map**\n\nTry this when you're feeling: dissociation/feeling unreal; diffuse anxiety; sadness/numbness; anger/rage. You'll need: Paper (large if possible) + colored pencils/markers.\n\nDrawing emotions as located in the body reconnects somatic and emotional awareness; builds interoceptive vocabulary; counters dissociation through embodied attention\n\nThis works because drawing emotions as located in the body reconnects somatic and emotional awareness; builds interoceptive vocabulary; counters dissociation through embodied attention You can do this private space or therapy-like setting.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "s01",
+    "nickname": "Pět smyslů",
+    "nickname_en": "5 Senses",
+    "color": "#c5e6d0",
+    "related": [
+      "S01"
+    ],
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "I'm completely spaced out.",
+    "body_cs": "**Pět smyslů**\n\nValí se na tebe obrovská úzkost? Ztrácíš se v hrozných myšlenkách a cítíš paniku? Rozhlédni se kolem sebe a najdi 5 věcí, které vidíš. Potom si všimni 4 věcí, kterých se můžeš dotknout. Zkus se zaposlouchat a najít 3 zvuky. Najdi 2 věci, které můžeš cítit čichem, a nakonec 1 věc, kterou můžeš ochutnat. Klidně to zkus kdykoliv znovu, tahle záchranná brzda se dá zatáhnout kdekoliv, i uprostřed třídy.",
+    "body_en": "**5 Senses**\n\nTry this when you're feeling: acute panic; dissociation/feeling unreal; diffuse anxiety; rumination. You'll need: Nothing.\n\nEngages prefrontal cortex through structured sensory attention → interrupts amygdala-driven anxiety loop; reorients to present moment\n\nThis works because engages prefrontal cortex through structured sensory attention → interrupts amygdala-driven anxiety loop; reorients to present moment You can do this anywhere (incl. school/public).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "s07",
+    "nickname": "Těžká deka",
+    "nickname_en": "Heavy Blanket",
+    "color": "#d8cfe6",
+    "related": [
+      "S07"
+    ],
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad.",
+    "body_cs": "**Těžká deka**\n\nMáš úzkost, že nemůžeš ani dýchat? Cítíš paniku nebo nemůžeš v noci vůbec zabrat? Vezmi si tu nejtěžší deku, co doma máš, nebo si na sebe naskládej několik polštářů a peřin. Zalez si pod ně tak, abys cítil/a tlak a váhu po celém těle. Zůstaň zachumlaný/á pod tou obrovskou tíhou a jenom klidně dýchej. Je to bezpečný úkryt, který si můžeš udělat ze své postele pokaždé, když toho na tebe bude moc.",
+    "body_en": "**Heavy Blanket**\n\nTry this when you're feeling: acute panic; diffuse anxiety; sleep difficulty; dissociation. You'll need: Heavy blanket, large pillow, or rolled towel.\n\nDeep pressure touch activates parasympathetic NS; releases serotonin and dopamine; reduces cortisol; mimics swaddling containment\n\nThis works because deep pressure touch activates parasympathetic ns; releases serotonin and dopamine; reduces cortisol; mimics swaddling containment You can do this home/private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "s06",
+    "nickname": "Můj playlist",
+    "nickname_en": "My Playlist",
+    "color": "#f5ddc8",
+    "related": [
+      "S06"
+    ],
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head.",
+    "body_cs": "**Můj playlist**\n\nSvírá tě samota a smutek? Cítíš úzkost, nebo naopak obrovský vztek a nemůžeš usnout? Nasaď si sluchátka a pusť si písničky, které máš ze všeho nejradši. Vyber si takové, které přesně odpovídají tomu, jak se teď cítíš. Poslouchej texty, vnímej každý tón a ponoř se do té hudby úplně naplno. Klidně si můžeš dopředu připravit speciální playlist pro chvíle, kdy ti bude pod psa, abys ho mohl/a jen zapnout.",
+    "body_en": "**My Playlist**\n\nTry this when you're feeling: sadness/numbness; diffuse anxiety; anger/rage; loneliness; sleep difficulty. You'll need: Phone/device with headphones.\n\nMusic modulates serotonin, dopamine; 60–80 BPM tempo entrains heartbeat toward rest; lyrics provide cognitive engagement and emotional validation\n\nThis works because music modulates serotonin, dopamine; 60–80 bpm tempo entrains heartbeat toward rest; lyrics provide cognitive engagement and emotional validation You can do this anywhere with headphones.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "c05",
+    "nickname": "DJ nálady",
+    "nickname_en": "Mood DJ",
+    "color": "#f5ddc8",
+    "related": [
+      "C05"
+    ],
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head.",
+    "body_cs": "**DJ nálady**\n\nCítíš obrovský smutek, vztek nebo úzkost? Máš pocit osamění a nevíš, jak to ze sebe dostat? Vezmi si telefon a vytvoř si hudební playlist, který přesně popisuje tvou náladu. Skládej za sebe písničky tak, aby první odrážely tvou aktuální bolest a ty další tě pomalu vedly k uvolnění a klidu. Jsi teď DJ svých vlastních pocitů. Pusť si tenhle výběr do sluchátek vždycky, když potřebuješ trochu bezpečí.",
+    "body_en": "**Mood DJ**\n\nTry this when you're feeling: sadness/numbness; anger/rage; loneliness; diffuse anxiety. You'll need: Phone/device with music app.\n\nActive selection engages executive function and identity expression; combines cognitive reappraisal (choosing songs that match/shift mood) with musical soothing\n\nThis works because active selection engages executive function and identity expression; combines cognitive reappraisal (choosing songs that match/shift mood) with musical soothing You can do this anywhere with headphones.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "k05",
+    "nickname": "STOP!",
+    "nickname_en": "STOP Sign",
+    "color": "#f0d0d0",
+    "related": [
+      "K05"
+    ],
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something.",
+    "body_cs": "**STOP!**\n\nMáš v sobě takový vztek, že máš chuť hned reagovat a třeba si i ublížit? Svírá tě akutní panika a jednáš zbrkle? Představ si obrovskou, červenou značku STOP. Zastav se, udělej pomyslný krok vzad a nadechni se. Podívej se na situaci jen jako nezaujatý pozorovatel, než vůbec něco uděláš. Tahle malá pauza ti dodá obrovskou sílu rozhodnout se líp, trénuj si tu stopku vždycky, když ucítíš tlak.",
+    "body_en": "**STOP Sign**\n\nTry this when you're feeling: acute panic; anger/rage; urge to self-harm. You'll need: Nothing.\n\nS-T-O-P: Stop, Take a step back, Observe, Proceed mindfully. Creates pause between trigger and reaction → engages prefrontal cortex before impulsive response\n\nThis works because s-t-o-p: stop, take a step back, observe, proceed mindfully. creates pause between trigger and reaction → engages prefrontal cortex before impulsive response You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "k06",
+    "nickname": "Jízda na vlně",
+    "nickname_en": "Urge Surfing",
+    "color": "#f0d0d0",
+    "related": [
+      "K06"
+    ],
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something.",
+    "body_cs": "**Jízda na vlně**\n\nMáš strašné nutkání udělat něco špatného nebo si ublížit? Sžírá tě vztek a těžké myšlenky, které tě celého/celou pohlcují? Představ si to svoje nutkání jako mořskou vlnu. Nesnaž se ji zastavit, prostě ji nech stoupat nahoru, nadechni se a počkej. Jen tu vlnu pozoruj, jak narůstá, až nakonec úplně sama ztratí sílu a opadne. Bude to těžké, ale pamatuj si, že tohle nutkání vždycky nakonec odplyne.",
+    "body_en": "**Urge Surfing**\n\nTry this when you're feeling: urge to self-harm; anger/rage; rumination. You'll need: Nothing.\n\nMindful observation of urge as wave → acceptance rather than suppression; urge intensity peaks and naturally subsides; reduces reactivity through non-judgmental awareness\n\nThis works because mindful observation of urge as wave → acceptance rather than suppression; urge intensity peaks and naturally subsides; reduces reactivity through non-judgmental awareness You can do this quiet space preferred.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "c02",
+    "nickname": "Výplach hlavy",
+    "nickname_en": "Brain Dump",
+    "color": "#d8e4cd",
+    "related": [
+      "C02"
+    ],
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head.",
+    "body_cs": "**Výplach hlavy**\n\nMáš v hlavě takový zmatek, že už to nejde vydržet? Cítíš vztek, smutek a drtí tě pocit samoty? Najdi si papír a tužku, nebo si otevři poznámky v telefonu. Začni psát úplně všechno, co se ti honí hlavou. Nepřemýšlej nad pravopisem, ani nad tím, jestli to dává smysl. Prostě to všechno ze sebe dostaň na ten papír. Až to napíšeš, můžeš si ty řádky schovat nebo klidně papír roztrhat a vyhodit, jestli se ti uleví.",
+    "body_en": "**Brain Dump**\n\nTry this when you're feeling: rumination/thought spirals; sadness/numbness; anger/rage; shame; loneliness. You'll need: Paper + pen, or phone notes app.\n\nExpressive writing externalizes cognitive loops → reduces working memory load on rumination; emotional labeling (affect labeling) reduces amygdala activation\n\nThis works because expressive writing externalizes cognitive loops → reduces working memory load on rumination; emotional labeling (affect labeling) reduces amygdala activation You can do this private space (or discreet phone use).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "c03",
+    "nickname": "Tajný dopis",
+    "nickname_en": "Secret Letter",
+    "color": "#d8e4cd",
+    "related": [
+      "C03"
+    ],
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head.",
+    "body_cs": "**Tajný dopis**\n\nSžírá tě samota nebo vztek na někoho konkrétního? Máš pocit viny a smutku, který nemůžeš nikomu říct? Vezmi si kus papíru a napiš tajný dopis někomu, s kým bys chtěl/a mluvit, ale z nějakého důvodu to nejde. Napiš tam všechno, co bys mu chtěl/a říct do očí, úplně bez cenzury. Tenhle dopis nikdy nemusíš nikomu odeslat, je to jen tvůj bezpečný prostor. Cvičíš si tím vyjádření svých pocitů, což ti může pomoct, až se o tom odhodláš s někým opravdu bavit.",
+    "body_en": "**Secret Letter**\n\nTry this when you're feeling: anger/rage; shame; loneliness; sadness/numbness; rumination. You'll need: Paper + pen.\n\nExternalizes interpersonal conflict or unexpressed emotion; cognitive defusion from relationship distress; creates sense of agency without confrontation risk\n\nThis works because externalizes interpersonal conflict or unexpressed emotion; cognitive defusion from relationship distress; creates sense of agency without confrontation risk You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "r01",
+    "nickname": "Krabička záchrany",
+    "nickname_en": "Coping Kit",
+    "color": "#eee5c8",
+    "related": [
+      "R01"
+    ],
+    "headline_cs": "Chci být připravený/á.",
+    "headline_en": "I want to be prepared.",
+    "body_cs": "**Krabička záchrany**\n\nNení ti teď zrovna nejlíp a chceš být připravený/á na to, až to na tebe zase přijde? Najdi si malou krabičku nebo pytlík a naplň ho věcmi, co tě dokážou uklidnit. Dej tam třeba oblíbenou vůni, antistresovou hračku, kyselý bonbon nebo lístek s číslem na linku bezpečí. Měj tenhle záchranný balíček pořád někde u sebe v batohu nebo u postele. Pokaždé, když bude zle, budeš hned vědět, kam sáhnout pro pomoc.",
+    "body_en": "**Coping Kit**\n\nTry this when you're feeling: preventive/all states (prepared in advance for crisis use). You'll need: Box or bag + chosen items (see kit contents list).\n\nPreparation itself builds self-efficacy and agency; pre-selecting items reduces decision fatigue during crisis; tangible kit serves as concrete reminder that coping is possible\n\nThis works because preparation itself builds self-efficacy and agency; pre-selecting items reduces decision fatigue during crisis; tangible kit serves as concrete reminder that coping is possible You can do this home (assembly); anywhere (use).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b06",
+    "nickname": "Vyklepání",
+    "nickname_en": "Shake It Out",
+    "color": "#e8ddd0",
+    "related": [
+      "B06"
+    ],
+    "headline_cs": "Jsem úplně mimo.",
+    "headline_en": "I'm completely spaced out.",
+    "body_cs": "**Vyklepání**\n\nCítíš v těle obrovský vztek nebo paniku? Přijde ti, že jsi úplně odpojený/á od reality? Postav se a začni třást rukama, jako bys z nich chtěl/a setřást vodu. Přidej k tomu třesení nohama, tělem a nakonec i hlavou. Vytřes ze sebe všechno to obrovské napětí, prostě se celý/á oklepej jako pes, který vylezl z vody. Nech to tělo dělat samo, jak potřebuje. Je to skvělý způsob, jak ze sebe dostat to nejhorší během chvilky.",
+    "body_en": "**Shake It Out**\n\nTry this when you're feeling: anger/rage; dissociation/feeling unreal; acute panic. You'll need: Nothing.\n\nSomatic discharge of stored stress energy through involuntary-mimicking voluntary tremor; resets autonomic nervous system\n\nThis works because somatic discharge of stored stress energy through involuntary-mimicking voluntary tremor; resets autonomic nervous system You can do this needs some privacy or accepting environment.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b12",
+    "nickname": "Dupání",
+    "nickname_en": "Stomping",
+    "color": "#e8ddd0",
+    "related": [
+      "B12"
+    ],
+    "headline_cs": "Jsem úplně mimo.",
+    "headline_en": "I'm completely spaced out.",
+    "body_cs": "**Dupání**\n\nMáš obrovský vztek nebo paniku? Přijde ti, že vlastně vůbec nejsi ve svém těle? Postav se oběma nohama pevně na zem. Začni dupat do podlahy vší silou. Soustřeď se na to, jak tvoje paty narážejí do země a jak ten náraz prostupuje celou nohou. Můžeš u toho i přenášet váhu z jedné nohy na druhou. Je v pořádku cítit se naštvaně, zkus to všechno zadupat do země.",
+    "body_en": "**Stomping**\n\nTry this when you're feeling: dissociation/feeling unreal; anger/rage; acute panic. You'll need: Floor/ground.\n\nStrong proprioceptive input through feet reconnects to body; bilateral stimulation; channels anger energy downward\n\nThis works because strong proprioceptive input through feet reconnects to body; bilateral stimulation; channels anger energy downward You can do this anywhere (can be discreet — pressing feet firmly).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b03",
+    "nickname": "Pevný stisk",
+    "nickname_en": "Squeeze & Release",
+    "color": "#efebd7",
+    "related": [
+      "B03"
+    ],
+    "body_cs": "**Pevný stisk**\n\nJsi tak ve stresu, že máš úplně ztuhlé celé tělo? Nemůžeš usnout, protože cítíš napětí v každém svalu? Lehni si na záda nebo se pohodlně posaď. Začni u nohou – zatni prsty na nohou vší silou, jako bys chtěl/a rozmačkat ořech, drž to tři vteřiny a pak je úplně povol. Postupuj takhle nahoru. Zatni lýtka a povol, zatni stehna a povol, zatni břicho, ruce v pěst a nakonec i celý obličej. Úplně se uvolni a nech tělo ztěžknout. Můžeš si z toho udělat svůj pravidelný večerní rituál.",
+    "body_en": "**Squeeze & Release**\n\nTry this when you're feeling: diffuse anxiety; anger/rage; sleep difficulty; school-related stress. You'll need: Nothing (optional: mat/bed).\n\nTense-release cycle creates proprioceptive contrast → muscles relax below baseline; reduces cortisol; Cohen's d = 1.12 in pediatric RCT\n\nThis works because tense-release cycle creates proprioceptive contrast → muscles relax below baseline; reduces cortisol; cohen's d = 1.12 in pediatric rct You can do this private space or quiet room.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "b08",
+    "nickname": "Tři pozice",
+    "nickname_en": "3 Yoga Poses",
+    "color": "#bdbaed",
+    "related": [
+      "B08"
+    ],
+    "body_cs": "**Tři pozice**\n\nMáš v hlavě zmatek a jsi smutný/á? Nemůžeš kvůli stresu usnout a cítíš se pod tlakem? Sedni si na zem, spoj chodidla k sobě a nech kolena klesnout do stran. Potom se pomalu předkloň dopředu a dýchej. Následně si stoupni, ohni se dolů a zkus se rukama dotknout prstů na nohou. Nakonec si lehni na záda a přitáhni si kolena k hrudníku. Kdykoliv budeš mít těžký večer, zkus si tyhle tři pohyby zacvičit na koberci.",
+    "body_en": "**3 Yoga Poses**\n\nTry this when you're feeling: diffuse anxiety; sadness/numbness; sleep difficulty; school-related stress. You'll need: Mat or soft surface (optional).\n\nCombines proprioceptive input, breath regulation, and interoceptive focus; activates parasympathetic NS; improves body awareness\n\nThis works because combines proprioceptive input, breath regulation, and interoceptive focus; activates parasympathetic ns; improves body awareness You can do this needs floor space; some privacy.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "b09",
+    "nickname": "Pomalý krok",
+    "nickname_en": "Slow Steps",
+    "color": "#c4dcbc",
+    "related": [
+      "B09"
+    ],
+    "body_cs": "**Pomalý krok**\n\nTočí se ti v hlavě pořád dokola stejné těžké myšlenky? Cítíš smutek a samotu? Nazuj si boty a vyraz ven, nebo klidně choď jen pomalu po chodbě. Soustřeď se úplně přesně na každý krok. Vnímej, jak se nejdřív dotkne země pata, pak chodidlo a nakonec špička. Zkus sladit kroky s dýcháním. Je normální se cítit pod psa, zkus ale u toho dojít někam, kde jsou lidé, i když s nimi nebudeš mluvit.",
+    "body_en": "**Slow Steps**\n\nTry this when you're feeling: rumination/thought spirals; sadness/numbness; diffuse anxiety; loneliness. You'll need: Shoes (optional).\n\nBilateral rhythmic movement; attention shift to body sensations and environment; gentle cardiovascular activation lowers cortisol\n\nThis works because bilateral rhythmic movement; attention shift to body sensations and environment; gentle cardiovascular activation lowers cortisol You can do this outdoors or indoors (corridor); somewhat private.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "b11",
+    "nickname": "Bzučení",
+    "nickname_en": "Humming",
+    "color": "#e6d3f3",
+    "related": [
+      "B11"
+    ],
+    "body_cs": "**Bzučení**\n\nSvírá tě panika a úzkost? Máš pocit, že jsi odtržený/á od vlastního těla? Zavři ústa, zhluboka se nadechni a při výdechu začni vydávat hluboký, vrčivý zvuk \"hmmmm\". Zkus to udělat tak, abys cítil/a vibrace v krku a na rtech. Vrč, dokud ti nedojde dech, a pak to zkus znovu. Pokud jsi venku, můžeš si dát sluchátka, nikdo si nevšimne, že si pro sebe pobrukuješ.",
+    "body_en": "**Humming**\n\nTry this when you're feeling: acute panic; diffuse anxiety; dissociation/feeling unreal. You'll need: Nothing.\n\nHumming vibrates laryngeal muscles adjacent to vagus nerve → direct vagal stimulation; extended exhalation effect; auditory self-soothing\n\nThis works because humming vibrates laryngeal muscles adjacent to vagus nerve → direct vagal stimulation; extended exhalation effect; auditory self-soothing You can do this semi-private (or with headphones to mask).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared."
+  },
+  {
+    "id": "s02",
+    "nickname": "Vůně bezpečí",
+    "nickname_en": "Safe Scent",
+    "color": "#c8d2f4",
+    "related": [
+      "S02"
+    ],
+    "body_cs": "**Vůně bezpečí**\n\nCítíš obrovský smutek a prázdnotu? Přepadla tě nečekaná panika a potřebuješ záchytný bod? Vezmi si voňavé mýdlo, lahvičku s esenciálním olejem, voňavý krém nebo sáček s oblíbeným čajem. Přičichni si k tomu a zkus tu vůni vnímat co nejvíc do hloubky. Dýchej tu vůni zhluboka a nechej ji, aby tě celého/celou obklopila. Zkus si tuhle svou záchrannou vůni dát do kapsy nebo do batohu, ať ji máš u sebe pokaždé, když budeš potřebovat.",
+    "body_en": "**Safe Scent**\n\nTry this when you're feeling: acute panic; diffuse anxiety; sadness/numbness; dissociation. You'll need: Scented object (soap, essential oil, spice, favorite cream, tea bag).\n\nOlfactory nerve has direct pathway to amygdala and hippocampus → bypasses cognitive processing; can trigger positive memory associations instantly\n\nThis works because olfactory nerve has direct pathway to amygdala and hippocampus → bypasses cognitive processing; can trigger positive memory associations instantly You can do this anywhere (keep item in pocket/bag).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared."
+  },
+  {
+    "id": "s03",
+    "nickname": "Hmatová kotva",
+    "nickname_en": "Touch & Feel",
+    "color": "#e0b9e9",
+    "related": [
+      "S03"
+    ],
+    "body_cs": "**Hmatová kotva**\n\nCítíš se mimo realitu a pohlcují tě černé myšlenky? Máš pocit úzkosti, který nejde zastavit? Najdi kolem sebe nějaký předmět s výraznou strukturou – může to být hrubá látka, drsný kámen, svazek klíčů nebo kůra stromu. Přejížděj po něm prsty a soustřeď se na každý hrbolek, rýhu a teplotu toho povrchu. Zkoumej ten předmět tak, jako bys ho držel/a úplně poprvé v životě. Klidně si malý kamínek nebo přívěsek přidej na klíče, ať ho máš stále u sebe.",
+    "body_en": "**Touch & Feel**\n\nTry this when you're feeling: dissociation/feeling unreal; diffuse anxiety; rumination. You'll need: Any textured objects nearby (fabric, stone, keys, bark).\n\nTactile sensory input grounds attention in the body and present moment; activates somatosensory cortex → competes with rumination circuits\n\nThis works because tactile sensory input grounds attention in the body and present moment; activates somatosensory cortex → competes with rumination circuits You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Jsem úplně mimo.",
+    "headline_en": "I'm completely spaced out."
+  },
+  {
+    "id": "s08",
+    "nickname": "Hračka do ruky",
+    "nickname_en": "Fidget Tool",
+    "color": "#cbe7c0",
+    "related": [
+      "S08"
+    ],
+    "body_cs": "**Hračka do ruky**\n\nTočí se ti v hlavě věci ze školy a nemůžeš je zastavit? Cítíš nervozitu a neklid po celém těle? Vezmi si do ruky malou pomůcku – antistresový míček, mačkací hmotu, spinner nebo jenom obyčejný hladký kamínek. Začni tu věc mačkat, točit s ní nebo ji převalovat v prstech. Soustředěně zaměstnej ruce, aby ta neklidná energie mohla odejít z těla ven. Tuhle drobnost si dej do penálu, ať ji můžeš nenápadně žmoulat i pod lavicí.",
+    "body_en": "**Fidget Tool**\n\nTry this when you're feeling: diffuse anxiety; rumination; school-related stress. You'll need: Fidget spinner, stress ball, putty, smooth stone, keychain.\n\nRepetitive tactile input provides low-level sensory regulation; occupies motor cortex → reduces anxious restlessness; somatosensory grounding\n\nThis works because repetitive tactile input provides low-level sensory regulation; occupies motor cortex → reduces anxious restlessness; somatosensory grounding You can do this anywhere (very discreet — school compatible).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "c04",
+    "nickname": "Kreslení vzorů",
+    "nickname_en": "Pattern Draw",
+    "color": "#d8e5b3",
+    "related": [
+      "C04"
+    ],
+    "body_cs": "**Kreslení vzorů**\n\nNemůžeš se zbavit stresu a pořád přemýšlíš nad tím stejným? Je ti smutno a jsi v napětí? Sedni si ke stolu a začni na papír kreslit různé opakující se vzory, tvary nebo mandaly. Pokud nechceš kreslit, najdi si vytištěnou omalovánku. Vybarvuj kousek po kousku a drž svou pozornost jen na té jedné lince nebo barvě. Tuhle zklidňující chvilku si můžeš dopřát kdekoliv, když si do batohu hodíš malý blok a propisku.",
+    "body_en": "**Pattern Draw**\n\nTry this when you're feeling: diffuse anxiety; rumination; school-related stress; sadness/numbness. You'll need: Paper + pen (or printed mandala template).\n\nStructured repetitive pattern creation induces flow state; anchors attention in present motor task; reduces default mode network rumination\n\nThis works because structured repetitive pattern creation induces flow state; anchors attention in present motor task; reduces default mode network rumination You can do this anywhere with surface.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "c06",
+    "nickname": "Trhání papíru",
+    "nickname_en": "Rip & Tear",
+    "color": "#cedeee",
+    "related": [
+      "C06"
+    ],
+    "body_cs": "**Trhání papíru**\n\nMáš chuť křičet, něco rozbít nebo si ublížit? Cítíš vztek, co s tebou cloumá? Popadni staré noviny, letáky z pošty nebo papíry, které už nepotřebuješ. Začni je trhat na ty nejmenší kousky, jaké dokážeš. Rvi je, mačkej a dej do toho veškerou sílu. Jestli chceš, můžeš ty kousky pak zkusit slepit dohromady do nějaké nové koláže. Je naprosto normální být naštvaný/á, raději nič starý papír, než aby sis ublížil/a.",
+    "body_en": "**Rip & Tear**\n\nTry this when you're feeling: anger/rage; urge to self-harm; rumination. You'll need: Old magazines, newspapers, scrap paper; optional glue + new paper.\n\nPhysical tearing provides proprioceptive release for anger energy; constructive destruction satisfies action urge without harm; creative reconstruction adds agency\n\nThis works because physical tearing provides proprioceptive release for anger energy; constructive destruction satisfies action urge without harm; creative reconstruction adds agency You can do this home/private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "c07",
+    "nickname": "Hlasovka",
+    "nickname_en": "Voice Memo",
+    "color": "#dccaf2",
+    "related": [
+      "C07"
+    ],
+    "body_cs": "**Hlasovka**\n\nCítíš se sám/sama a je ti hrozně? Máš pocity hanby a pořád se ti vrací ty samé myšlenky? Otevři si v telefonu aplikaci na nahrávání hlasu. Začni mluvit a nahraj si všechno, co zrovna prožíváš. Mluv nahlas o tom, co tě trápí a co tě bolí. Nahrávku si pak můžeš pustit znovu a zkusit si k sobě říct něco vlídného. Třeba ti tohle povídání se sebou samým pomůže najít odvahu zavolat na linku důvěry, když ti bude nejhůř.",
+    "body_en": "**Voice Memo**\n\nTry this when you're feeling: loneliness; sadness/numbness; rumination; shame. You'll need: Phone with voice recorder.\n\nHearing own voice externalizes internal dialogue; creates observer perspective (cognitive defusion); records can be replayed for self-validation\n\nThis works because hearing own voice externalizes internal dialogue; creates observer perspective (cognitive defusion); records can be replayed for self-validation You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad."
+  },
+  {
+    "id": "c08",
+    "nickname": "Můj text / Rap",
+    "nickname_en": "My Rap / Lyrics",
+    "color": "#efd2de",
+    "related": [
+      "C08"
+    ],
+    "body_cs": "**Můj text / Rap**\n\nSvírá tě vztek nebo se cítíš úplně prázdný/á? Máš pocit samoty a viny, který tě nechce pustit? Zkus svoje myšlenky sepsat jako rapový text nebo básničku. Hledej rýmy a zkus do nich dostat veškerou tu tvrdost a emoce, které v sobě máš. Soustřeď se na rytmus a vyřvi se v těch řádcích na papír nebo do telefonu. Svůj text můžeš i někomu ukázat, až budeš chtít dát najevo, jak ti vlastně je.",
+    "body_en": "**My Rap / Lyrics**\n\nTry this when you're feeling: anger/rage; sadness/numbness; loneliness; shame; rumination. You'll need: Paper + pen, or phone notes.\n\nStructures emotional expression within creative constraint (rhythm, rhyme); engages executive function; provides mastery experience and identity expression\n\nThis works because structures emotional expression within creative constraint (rhythm, rhyme); engages executive function; provides mastery experience and identity expression You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "c09",
+    "nickname": "Modelování",
+    "nickname_en": "Clay Play",
+    "color": "#b2afe9",
+    "related": [
+      "C09"
+    ],
+    "body_cs": "**Modelování**\n\nZžírá tě úzkost a vztek? Máš obrovské nutkání si ublížit nebo se točíš v těžkých myšlenkách? Najdi doma modelínu, plastelínu nebo si udělej jednoduché slané těsto. Mačkej hmotu v dlaních, bouchej do ní a vytvaruj z ní cokoliv tě napadne. Klidně ten výtvor zase rozmačkej a začni znova. Zkus do té hmoty otisknout veškerou svou zlost a napětí, klidně to opakuj každý den.",
+    "body_en": "**Clay Play**\n\nTry this when you're feeling: anger/rage; diffuse anxiety; urge to self-harm; rumination. You'll need: Modelling clay, playdough, or DIY salt dough.\n\nCombines tactile sensory input with creative expression; squeezing/shaping provides proprioceptive outlet for anger; three-dimensional externalization of feelings\n\nThis works because combines tactile sensory input with creative expression; squeezing/shaping provides proprioceptive outlet for anger; three-dimensional externalization of feelings You can do this home/school (clean surface needed).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "k01",
+    "nickname": "Jen myšlenka",
+    "nickname_en": "Just a Thought",
+    "color": "#cdeee2",
+    "related": [
+      "K01"
+    ],
+    "body_cs": "**Jen myšlenka**\n\nTrápí tě věci spojené se školou a padá na tebe úzkost? Máš v hlavě myšlenky, za které se stydíš a pořád se vracejí? Zkus si ve své mysli před každou takovou myšlenku přidat větu: \"Všímám si, že mám teď myšlenku, že...\". Zopakuj si to několikrát, abys tu negativní myšlenku oddělil/a od sebe. Nejsi tvoje myšlenky, ony jen proplouvají tvou hlavou a zase zmizí. Zkus si na to vzpomenout, až to na tebe příště přijde.",
+    "body_en": "**Just a Thought**\n\nTry this when you're feeling: rumination/thought spirals; diffuse anxiety; shame; school-related stress. You'll need: Nothing.\n\nCognitive defusion: adding 'I notice I'm having the thought…' prefix creates psychological distance between self and thought content → reduces fusion with negative cognition\n\nThis works because cognitive defusion: adding 'i notice i'm having the thought…' prefix creates psychological distance between self and thought content → reduces fusion with negative cognition You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "k02",
+    "nickname": "Bezpečné místo",
+    "nickname_en": "Safe Place",
+    "color": "#f5cce5",
+    "related": [
+      "K02"
+    ],
+    "body_cs": "**Bezpečné místo**\n\nSvírá tě panika a cítíš se sám/sama? Nemůžeš usnout a zdá se ti, že svět není skutečný? Zavři oči a představ si to nejvíc bezpečné a klidné místo, jaké znáš. Může to být tvůj pokoj, les, nebo i úplně vymyšlené místo. Představuj si, jaké to tam má barvy, jak to tam voní a co tam můžeš slyšet. Zůstaň v téhle představě tak dlouho, jak potřebuješ. Tohle bezpečné místo máš vždycky u sebe ve své hlavě. ❤️",
+    "body_en": "**Safe Place**\n\nTry this when you're feeling: acute panic; diffuse anxiety; sleep difficulty; dissociation; loneliness. You'll need: Nothing (optional: guided audio).\n\nGuided imagery activates same neural circuits as real sensory experience; creates competing positive emotional state; reduces amygdala activation through positive memory/imagination\n\nThis works because guided imagery activates same neural circuits as real sensory experience; creates competing positive emotional state; reduces amygdala activation through positive memory/imagination You can do this quiet space preferred; possible anywhere with eyes closed.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared."
+  },
+  {
+    "id": "k03",
+    "nickname": "Okénko starostí",
+    "nickname_en": "Worry Window",
+    "color": "#eddcb6",
+    "related": [
+      "K03"
+    ],
+    "body_cs": "**Okénko starostí**\n\nPropadáš se do spirály úzkosti a nevíš, jak to zastavit? Cítíš obrovský stres ze školy a pořád nad tím přemýšlíš? Zkus všechny tyhle těžké myšlenky odložit na později. Urči si přesný čas, třeba v pět hodin odpoledne na patnáct minut, kdy se všemu tomu stresu budeš naplno věnovat. Teď to jen zapiš na kus papíru a odlož to do té doby. Zjistíš, že spousta obav se do té doby zmenší, zkus si tohle okénko plánovat klidně každý den.",
+    "body_en": "**Worry Window**\n\nTry this when you're feeling: rumination/thought spirals; diffuse anxiety; school-related stress. You'll need: Nothing (optional: paper to note worry for later).\n\nScheduled worry window breaks reinforcement cycle of immediate rumination; trains cognitive flexibility; most worries feel less urgent when revisited later\n\nThis works because scheduled worry window breaks reinforcement cycle of immediate rumination; trains cognitive flexibility; most worries feel less urgent when revisited later You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "k04",
+    "nickname": "Nejlepší kamarád",
+    "nickname_en": "Best Friend",
+    "color": "#f2d8d4",
+    "related": [
+      "K04"
+    ],
+    "body_cs": "**Nejlepší kamarád**\n\nCítíš k sobě hanbu a smutek? Máš v hlavě neustále myšlenky, které tě ze všeho obviňují a srážejí dolů? Zkus si představit, že tyhle samé problémy má tvůj nejlepší kamarád nebo někdo, koho máš strašně moc rád/a. Co bys mu v tuhle chvíli řekl/a? Zkus ta samá vlídná a povzbudivá slova říct sám/sama sobě. Buď k sobě laskavý/á, zasloužíš si to úplně stejně jako tví přátelé.",
+    "body_en": "**Best Friend**\n\nTry this when you're feeling: shame; rumination; school-related stress; sadness/numbness. You'll need: Nothing.\n\nPerspective-taking exercise breaks self-critical loop; activating compassionate self-talk engages affiliative soothing system → counteracts threat system dominance\n\nThis works because perspective-taking exercise breaks self-critical loop; activating compassionate self-talk engages affiliative soothing system → counteracts threat system dominance You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nejradši bych se propadl/a.",
+    "headline_en": "I just want to disappear."
+  },
+  {
+    "id": "k07",
+    "nickname": "Těžké počty",
+    "nickname_en": "Brain Math",
+    "color": "#b7d0e6",
+    "related": [
+      "K07"
+    ],
+    "body_cs": "**Těžké počty**\n\nJsi v panice a cítíš, že se ztrácíš mimo realitu? Útočí na tebe dokola ty stejné strašné myšlenky? Začni v duchu odpočítávat od stovky směrem dolů a odčítej vždycky sedmičku. Takže 100, 93, 86, 79... Soustřeď se jen na ty počty. Pokud je to moc těžké, klidně odčítej po třech. Tenhle matematický úkol tvoji mysl skvěle odvede od paniky kdekoli a kdykoli, dokonce i uprostřed vyučování.",
+    "body_en": "**Brain Math**\n\nTry this when you're feeling: acute panic; dissociation/feeling unreal; rumination. You'll need: Nothing.\n\nCounting backwards from 100 by 7s (or simpler for younger) engages prefrontal cortex → competes with emotional processing; cognitive load displaces rumination; reorients to present\n\nThis works because counting backwards from 100 by 7s (or simpler for younger) engages prefrontal cortex → competes with emotional processing; cognitive load displaces rumination; reorients to present You can do this anywhere (completely discreet).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared."
+  },
+  {
+    "id": "k08",
+    "nickname": "Pro a proti",
+    "nickname_en": "Pros & Cons",
+    "color": "#e3aeef",
+    "related": [
+      "K08"
+    ],
+    "body_cs": "**Pro a proti**\n\nCítíš obrovský vztek a máš nutkání si okamžitě ublížit? Chceš udělat něco, čeho bys mohl/a litovat? Najdi si kousek papíru a nakresli si tabulku se dvěma sloupci. Do jednoho napiš, co dobrého ti ta věc přinese hned teď, a do druhého, jaké to bude mít následky zítra a za týden. Rozepiš to upřímně a pravdivě. Až budeš mít takový lístek hotový, můžeš ho nosit u sebe a podívat se na něj, když ti bude příště těžko.",
+    "body_en": "**Pros & Cons**\n\nTry this when you're feeling: urge to self-harm; anger/rage (before impulsive action). You'll need: Paper + pen (or mental).\n\nStructured evaluation of short-term vs long-term consequences engages rational mind; prepares commitment to use skills; can be prepared in advance and carried as reminder card\n\nThis works because structured evaluation of short-term vs long-term consequences engages rational mind; prepares commitment to use skills; can be prepared in advance and carried as reminder card You can do this private space preferred.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť si ublížit.",
+    "headline_en": "I want to hurt myself."
+  },
+  {
+    "id": "sa03",
+    "nickname": "Dopis do budoucna",
+    "nickname_en": "Future Letter",
+    "color": "#dae7c6",
+    "related": [
+      "SA03"
+    ],
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad.",
+    "body_cs": "**Dopis do budoucna**\n\nPropadáš se do smutku, samoty a hanby? Zžírají tě pořád stejné těžké myšlenky a nevíš, jak dál? Najdi si papír, nebo vezmi do ruky telefon. Napiš dlouhý dopis svému budoucímu já – tomu, kým budeš za měsíc nebo za rok. Napiš mu o všem, co teď prožíváš, a co doufáš, že se do té doby zlepší. Můžeš do toho přidat i slova útěchy, a když si to později přečteš, připomene ti to, že těžké časy opravdu pomíjejí.",
+    "body_en": "**Future Letter**\n\nTry this when you're feeling: sadness/numbness; loneliness; rumination; shame. You'll need: Paper + pen (or email/phone notes).\n\nTemporal self-distancing (writing to future self) creates hope and perspective; self-compassionate framing; can be reread as anchor during future distress\n\nThis works because temporal self-distancing (writing to future self) creates hope and perspective; self-compassionate framing; can be reread as anchor during future distress You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "sa04",
+    "nickname": "Tři radosti",
+    "nickname_en": "3 Good Things",
+    "color": "#e4e1c9",
+    "related": [
+      "SA04"
+    ],
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad.",
+    "body_cs": "**Tři radosti**\n\nCítíš smutek, samotu a tvoje myšlenky se pořád točí v kruhu? Nemůžeš v noci kvůli stresu ani zavřít oči? Zastav se a sepiš si, nebo jen vymysli v hlavě, tři hezké věci, které tě dneska potěšily. Mohou to být úplné maličkosti – třeba že vysvitlo slunce, dobrý oběd, nebo že ses na někoho usmál/a. Zaměř se na to dobré a zkus z tohohle malého úkolu udělat svůj každodenní večerní zvyk.",
+    "body_en": "**3 Good Things**\n\nTry this when you're feeling: sadness/numbness; rumination; loneliness; sleep difficulty. You'll need: Paper + pen (or mental / phone notes).\n\nShifts attentional bias from threat/negative to positive; savoring activates reward circuitry; trains positive memory retrieval; counters negativity bias\n\nThis works because shifts attentional bias from threat/negative to positive; savoring activates reward circuitry; trains positive memory retrieval; counters negativity bias You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "sa05",
+    "nickname": "Vnitřní kouč",
+    "nickname_en": "Inner Coach",
+    "color": "#cfc1e2",
+    "related": [
+      "SA05"
+    ],
+    "headline_cs": "Nejradši bych se propadl/a.",
+    "headline_en": "I just want to disappear.",
+    "body_cs": "**Vnitřní kouč**\n\nPřijde ti, že jsi na všechno sám/sama, cítíš hanbu a máš chuť si ublížit? Ztrácíš se ve smutku a těžkých myšlenkách? Představ si, že uvnitř tebe bydlí moudrý a neuvěřitelně hodný trenér nebo kamarád. Zavři oči a řekni si v duchu něco laskavého, třeba: \"Mrzí mě, že se teď takhle cítíš, a mám tě moc rád/a.\" Buď na sebe měkký/á a povzbuzuj se. Opakuj si to klidně potichu každý den a věř, že si taková slova opravdu zasloužíš.",
+    "body_en": "**Inner Coach**\n\nTry this when you're feeling: shame; sadness/numbness; loneliness; urge to self-harm; rumination. You'll need: Nothing.\n\nActivates affiliative/soothing system → counteracts threat-based self-criticism; reduces cortisol; builds self-compassion neural pathways through repetition\n\nThis works because activates affiliative/soothing system → counteracts threat-based self-criticism; reduces cortisol; builds self-compassion neural pathways through repetition You can do this anywhere (internal or whispered).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "sa06",
+    "nickname": "Napsat o pomoc",
+    "nickname_en": "Text for Help",
+    "color": "#eccfeb",
+    "related": [
+      "SA06"
+    ],
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much.",
+    "body_cs": "**Napsat o pomoc**\n\nDoléhá na tebe šílená panika a samota? Máš nutkání udělat něco špatného nebo si ublížit? Otevři si na telefonu internet nebo zprávy. Napiš na chat nebo pošli e-mail organizacím, které lidem v tvé situaci pomáhají, jako je třeba Linka bezpečí. Nemusíš ani mluvit, stačí všechno napsat. Není ostuda požádat o pomoc, je to strašně statečný krok, který ti může ulevit. ❤️",
+    "body_en": "**Text for Help**\n\nTry this when you're feeling: any emotional state; urge to self-harm; loneliness; acute panic. You'll need: Phone/device with internet.\n\nText-based communication lowers barrier vs voice call; anonymity reduces shame; professional guidance in real time; bridges fully to professional help\n\nThis works because text-based communication lowers barrier vs voice call; anonymity reduces shame; professional guidance in real time; bridges fully to professional help You can do this needs privacy for typing.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "n01",
+    "nickname": "Bosé nohy",
+    "nickname_en": "Bare Feet",
+    "color": "#e5e6b2",
+    "related": [
+      "N01"
+    ],
+    "body_cs": "**Bosé nohy**\n\nMáš vztek, úzkost a přijde ti, že vůbec nejsi v reálném světě? Pohlcují tě černé myšlenky a potřebuješ pevnou půdu pod nohama? Běž ven, zuj si boty i ponožky a stoupni si bosýma nohama do trávy, hlíny nebo písku. Vnímej každou nerovnost, chlad země a to, jak pevně na ní stojíš. Tohle uzemnění si můžeš dopřát kdekoliv v parku a připomenout si, že jsi tu a jsi v bezpečí.",
+    "body_en": "**Bare Feet**\n\nTry this when you're feeling: dissociation/feeling unreal; diffuse anxiety; rumination; anger/rage. You'll need: Safe ground surface (grass, earth, sand).\n\nDirect tactile contact with earth surface; strong sensory grounding through soles of feet; some evidence for cortisol reduction through electron transfer; primarily sensory reorientation\n\nThis works because direct tactile contact with earth surface; strong sensory grounding through soles of feet; some evidence for cortisol reduction through electron transfer; primarily sensory reorientation You can do this outdoors with safe ground surface.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Jsem úplně mimo.",
+    "headline_en": "I'm completely spaced out."
+  },
+  {
+    "id": "n02",
+    "nickname": "Lov pokladů",
+    "nickname_en": "Nature Hunt",
+    "color": "#ecd9b6",
+    "related": [
+      "N02"
+    ],
+    "body_cs": "**Lov pokladů**\n\nTrápí tě úzkost ze školy a utápíš se ve smutku? Nejdou ti zastavit nepříjemné myšlenky? Běž ven na chvíli do přírody nebo do parku. Zkus kolem sebe najít 5 věcí různých tvarů, třeba zajímavý list, kousek kůry stromu nebo barevný kamínek. Vnímej jenom to objevování a detailní prohlížení všeho, co najdeš. Tuhle pátračku si můžeš zopakovat kdykoli venku narazíš na něco hezkého ke koukání.",
+    "body_en": "**Nature Hunt**\n\nTry this when you're feeling: diffuse anxiety; rumination; sadness/numbness; school-related stress. You'll need: Nothing (optional: phone to photograph finds).\n\nCombines sensory grounding with soft fascination of natural environment; attention restoration through involuntary attention → allows directed attention to rest and recover\n\nThis works because combines sensory grounding with soft fascination of natural environment; attention restoration through involuntary attention → allows directed attention to rest and recover You can do this outdoors.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "n03",
+    "nickname": "Pozorování mraků",
+    "nickname_en": "Cloud Watch",
+    "color": "#e5c8df",
+    "related": [
+      "N03"
+    ],
+    "body_cs": "**Pozorování mraků**\n\nCítíš obrovskou úzkost, smutek a samotu? Ztrácíš se v myšlenkách, které neberou konce? Běž ven nebo si stoupni k oknu a zadívej se na oblohu plnou mraků. Jenom pozoruj, jak ty mraky pomalu plynou, mění tvary a ztrácejí se v dálce. Nesnaž se v nich nic hledat, prostě se jen ztrať v tom obrovském, otevřeném prostoru. Kdykoliv budeš mít těžkou chvíli, obloha na tebe venku vždycky počká.",
+    "body_en": "**Cloud Watch**\n\nTry this when you're feeling: rumination; diffuse anxiety; sadness/numbness; loneliness. You'll need: Nothing.\n\nExpansive visual field reduces threat-focused tunnel vision; sky provides non-judgmental vast space for projection; soft fascination engages default mode network constructively\n\nThis works because expansive visual field reduces threat-focused tunnel vision; sky provides non-judgmental vast space for projection; soft fascination engages default mode network constructively You can do this outdoors or near window.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "h01",
+    "nickname": "Legrační hlas",
+    "nickname_en": "Silly Voice",
+    "color": "#cae8e2",
+    "related": [
+      "H01"
+    ],
+    "body_cs": "**Legrační hlas**\n\nPadá na tebe úzkost nebo stres ze školy? Jsi plný/á hanby a točíš se pořád ve stejných negativních myšlenkách? Vem tu strašnou myšlenku, co se ti honí hlavou, a zkus ji říct nahlas úplně směšným, kresleným hlasem. Nebo ji řekni jako bys byl/a tvoje oblíbená vtipná filmová postava. Dělej si z té myšlenky legraci a uvidíš, že rázem nebude tak strašidelná. Tenhle vtipný trik si můžeš udělat i potichu pro sebe, když na tebe půjde splín.",
+    "body_en": "**Silly Voice**\n\nTry this when you're feeling: rumination; shame; school-related stress; diffuse anxiety. You'll need: Nothing.\n\nRepeating anxious thought in silly voice/cartoon accent creates cognitive defusion → reduces believability and emotional charge of the thought; humor activates reward circuitry\n\nThis works because repeating anxious thought in silly voice/cartoon accent creates cognitive defusion → reduces believability and emotional charge of the thought; humor activates reward circuitry You can do this private space (or whispered).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "h02",
+    "nickname": "Vtipné video",
+    "nickname_en": "Funny Video",
+    "color": "#e1e3ca",
+    "related": [
+      "H02"
+    ],
+    "body_cs": "**Vtipné video**\n\nJe ti strašně smutno, cítíš samotu a úzkost? Máš plnou hlavu myšlenek, kterých se potřebuješ zbavit? Popadni telefon a najdi si nějaká opravdu zábavná videa s kočkami, vtipnými zvířaty nebo memy, které tě minule rozesmály. Podívej se na pár z nich a zkus se aspoň trochu usmát nebo zasmát. Smích je skvělý zachránce, takže si ty nejlepší kousky klidně ukládej na horší časy.",
+    "body_en": "**Funny Video**\n\nTry this when you're feeling: sadness/numbness; loneliness; diffuse anxiety; rumination. You'll need: Phone/device.\n\nLaughter triggers endorphin release; shifts facial musculature → afferent signal to brain for positive affect; cognitive distraction from negative loops\n\nThis works because laughter triggers endorphin release; shifts facial musculature → afferent signal to brain for positive affect; cognitive distraction from negative loops You can do this anywhere with phone.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad."
+  },
+  {
+    "id": "r02",
+    "nickname": "Večerní klid",
+    "nickname_en": "Bedtime Routine",
+    "color": "#e4d7ef",
+    "related": [
+      "R02"
+    ],
+    "body_cs": "**Večerní klid**\n\nNemůžeš usnout a přepadá tě v posteli obrovská úzkost? Trápí tě černé myšlenky, sotva zavřeš oči? Udělej si každý večer ten stejný zklidňující zvyk. Půl hodiny před spaním odlož telefon, vyvětrej si pokoj, zapiš si myšlenky do deníku a udělej pár klidných nádechů a výdechů. Tohle pravidelné opakování pomůže tvému tělu uvěřit, že je už v bezpečí a může jít spát.",
+    "body_en": "**Bedtime Routine**\n\nTry this when you're feeling: sleep difficulty; diffuse anxiety; rumination. You'll need: Nothing (optional: journal, calming scent, music).\n\nConsistent pre-sleep ritual signals circadian system; reduces sleep-onset anxiety through predictability; combines multiple low-activation techniques (breathing, journaling, sensory soothing)\n\nThis works because consistent pre-sleep ritual signals circadian system; reduces sleep-onset anxiety through predictability; combines multiple low-activation techniques (breathing, journaling, sensory soothing) You can do this home/bedroom.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "r03",
+    "nickname": "Ranní start",
+    "nickname_en": "Morning Check",
+    "color": "#ebd9ad",
+    "related": [
+      "R03"
+    ],
+    "body_cs": "**Ranní start**\n\nMáš už od rána úzkost a cítíš se smutný/á a pod obrovským tlakem? Než vůbec začneš den, polož sám/sama sobě tři jednoduché otázky. Zeptej se: Jak se dneska cítím? Co zrovna teď potřebuješ? Co pro sebe dneska můžu udělat? Tenhle malý ranní úkol ti dodá sílu zvládnout cokoli, a možná díky němu líp poznáš, kdy potřebuješ zvednout telefon a svěřit se někomu s tím, co tě trápí.",
+    "body_en": "**Morning Check**\n\nTry this when you're feeling: diffuse anxiety; rumination; sadness/numbness; school-related stress. You'll need: Nothing (optional: journal).\n\nThree questions: How am I feeling? What do I need? What's one thing I can do for myself today? — builds interoceptive awareness and self-agency; daily practice strengthens emotional vocabulary\n\nThis works because three questions: how am i feeling? what do i need? what's one thing i can do for myself today? — builds interoceptive awareness and self-agency; daily practice strengthens emotional vocabulary You can do this anywhere (home, school).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "b13",
+    "nickname": "Lehký úsměv",
+    "nickname_en": "Half-Smile",
+    "color": "#c5c5f2",
+    "related": [
+      "B13"
+    ],
+    "body_cs": "**Lehký úsměv**\n\nCloumá s tebou obrovský vztek nebo odpor? Máš tak silné nutkání ublížit si, že nevíš kudy kam? Zastav se na vteřinu a zkus úplně povolit svaly v obličeji. Pootvoř dlaně a zkus se aspoň napůl, docela lehce usmát, i když na to vůbec nemáš náladu. Tímhle zvláštním trikem vyšleš svému tělu jasný signál, že se vlastně nic tak hrozného neděje a ono může přestat bojovat. Můžeš to opakovat kolikrát budeš potřebovat.",
+    "body_en": "**Half-Smile**\n\nTry this when you're feeling: anger/rage, rigid defiance, urge to self-harm. You'll need: Nothing.\n\nUtilizes the facial feedback hypothesis; relaxing facial muscles and opening hands biologically contradicts the physiology of anger.\n\nThis works because utilizes the facial feedback hypothesis; relaxing facial muscles and opening hands biologically contradicts the physiology of anger. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "s09",
+    "nickname": "Bystré ucho",
+    "nickname_en": "Mindful Ear",
+    "color": "#abede2",
+    "related": [
+      "S09"
+    ],
+    "body_cs": "**Bystré ucho**\n\nZžírá tě úzkost a točí se ti v hlavě myšlenky, které se nedají zastavit? Zavři na moment oči a začni pozorně poslouchat. Nejdřív najdi ten nejhlasitější zvuk v okolí, třeba auta venku nebo bzučení lednice. Pak se soustřeď dál a pokus se zaslechnout ten úplně nejtišší zvuk, který bys normálně přešel/přešla, jako je třeba šustění tvého oblečení. Zaměstnej svýma ušima hlavu tak, ať ty těžké myšlenky vůbec nemají šanci.",
+    "body_en": "**Mindful Ear**\n\nTry this when you're feeling: diffuse anxiety, thought spirals. You'll need: Nothing.\n\nShifting auditory focus from loud to quiet noises requires sustained attentional control, which disrupts catastrophic thought spirals.\n\nThis works because shifting auditory focus from loud to quiet noises requires sustained attentional control, which disrupts catastrophic thought spirals. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "s10",
+    "nickname": "Hřejivý hrnek",
+    "nickname_en": "Warm Mug",
+    "color": "#d7edc4",
+    "related": [
+      "S10"
+    ],
+    "body_cs": "**Hřejivý hrnek**\n\nCítíš obrovskou samotu a smutek? Zdá se ti, že je kolem tebe jen prázdno a zima? Běž do kuchyně a uvař si teplý čaj, kakao nebo klidně jen horkou vodu do hrnečku. Obejmi ten teplý hrnek oběma rukama, vnímej, jak hřeje, a pomalu ten sladký, teplý nápoj upíjej. Tohle objetí na dálku a teplo tě vrátí do bezpečí, a ukáže tvému tělu, že je čas se zklidnit.",
+    "body_en": "**Warm Mug**\n\nTry this when you're feeling: sadness, numbness, loneliness. You'll need: Hot beverage, mug.\n\nRadiant warmth on hands and sweet liquids mimic evolutionary markers of safety and maternal buffering, triggering dopamine.\n\nThis works because radiant warmth on hands and sweet liquids mimic evolutionary markers of safety and maternal buffering, triggering dopamine. You can do this home / kitchen access.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad."
+  },
+  {
+    "id": "s11",
+    "nickname": "Obkreslování okem",
+    "nickname_en": "Eye Tracing",
+    "color": "#c3c0de",
+    "related": [
+      "S11"
+    ],
+    "body_cs": "**Obkreslování okem**\n\nDoléhá na tebe stres ze školy a svírá tě panika? Polož si ruku s roztaženými prsty na stůl nebo na koleno. Prstem druhé ruky začni pomalu objíždět každý její obrys, jako bys ji kreslil/a na papír. Jezdi nahoru po prstu a dolů, a zkus s tím synchronizovat svůj dech – s nádechem jeď nahoru, s výdechem dolů. Tuhle nenápadnou záchrannou brzdu si můžeš klidně aplikovat i o přestávce.",
+    "body_en": "**Eye Tracing**\n\nTry this when you're feeling: school-related stress, acute panic. You'll need: Nothing.\n\nTracing the physical outline of a hand forces eyes into deliberate, slow paths, synchronizing breath with visual tracking.\n\nThis works because tracing the physical outline of a hand forces eyes into deliberate, slow paths, synchronizing breath with visual tracking. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Bojím se.",
+    "headline_en": "I'm scared."
+  },
+  {
+    "id": "c11",
+    "nickname": "Čmárání pocitů",
+    "nickname_en": "Emotion Scribble",
+    "color": "#e4b9cf",
+    "related": [
+      "C11"
+    ],
+    "body_cs": "**Čmárání pocitů**\n\nZžírá tě nezvladatelný vztek nebo frustrace? Máš chuť si okamžitě ublížit a potřebuješ to nějak dostat ven? Vem si tužku, fix nebo pastelku a ten nejbližší volný papír. Rychle a klidně úplně agresivně po něm začni čmárat a rýhovat do něj všechen ten vztek. Dej do těch čar úplně všechnu energii a napětí z rukou, a nenech se odradit tím, jak to vypadá. Je skvělé, že svůj vztek odnese jen papír a ne ty.",
+    "body_en": "**Emotion Scribble**\n\nTry this when you're feeling: anger/rage, urge to self-harm, frustration. You'll need: Paper, crayons/pens.\n\nRapid, aggressive motor movements on paper safely discharge kinetic energy associated with the fight response without bodily harm.\n\nThis works because rapid, aggressive motor movements on paper safely discharge kinetic energy associated with the fight response without bodily harm. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "c12",
+    "nickname": "Skládání papíru",
+    "nickname_en": "Paper Folding",
+    "color": "#d0cdf4",
+    "related": [
+      "C12"
+    ],
+    "body_cs": "**Skládání papíru**\n\nSvírá tě úzkost nebo stres ze školy? Nemůžeš zastavit proud myšlenek, co se ti honí v hlavě? Najdi si kousek papíru a začni ho podle nějakého návodu nebo jen tak sám/sama skládat do přesných, pevných záhybů. Soustřeď se úplně plně na to, aby hrany lícovaly a každý sklad byl naprosto rovný. Zaměstnáš tím dokonale své prsty i mozek, takže ti nezbyde místo na žádnou paniku.",
+    "body_en": "**Paper Folding**\n\nTry this when you're feeling: rumination, diffuse anxiety, school stress. You'll need: Paper.\n\nPrecise, repetitive fine-motor movements demand concentration, drawing cognitive resources away from anxiety while providing mastery.\n\nThis works because precise, repetitive fine-motor movements demand concentration, drawing cognitive resources away from anxiety while providing mastery. You can do this flat surface.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "c13",
+    "nickname": "Vytloukání rytmu",
+    "nickname_en": "Drumming",
+    "color": "#edbfbf",
+    "related": [
+      "C13"
+    ],
+    "body_cs": "**Vytloukání rytmu**\n\nPohlcuje tě obrovský vztek? Přijde ti, že jsi odpojený/á od okolí a ztrácíš se ve vlastních pocitech? Posaď se a začni dlaněmi rytmicky bubnovat do stehen nebo do stolu. Můžeš k tomu i dupat nohama a vytvořit si svůj vlastní pevný rytmus. Úplně se do toho zvuku ponoř, soustřeď se jen na to, kdy dlaně dopadnou. Tuhle hudební vložku zkus kdykoli budeš potřebovat rozehnat ten černý mrak v hlavě.",
+    "body_en": "**Drumming**\n\nTry this when you're feeling: anger/rage, dissociation. You'll need: Nothing (hands on thighs).\n\nRhythmic, bilateral tapping bypasses higher cognitive functioning to establish a predictable physical tempo that counteracts internal chaos.\n\nThis works because rhythmic, bilateral tapping bypasses higher cognitive functioning to establish a predictable physical tempo that counteracts internal chaos. You can do this tolerant of mild noise.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "k09",
+    "nickname": "Zkrátka to tak je",
+    "nickname_en": "It Is What It Is",
+    "color": "#f3bee7",
+    "related": [
+      "K09"
+    ],
+    "body_cs": "**Zkrátka to tak je**\n\nZlobíš se a jsi strašně smutný/á kvůli něčemu, co nejde nijak změnit? Cítíš obrovskou frustraci nad věcmi, které se už prostě staly? Přestaň na chvíli bojovat, povol ramena, zhluboka se nadechni a řekni si: „Takhle to teď prostě je.“ Přijmout tu situaci neznamená, že s ní souhlasíš, ale znamená to, že se přestaneš zbytečně dál trápit. Zkus tohle těžké propuštění vyzkoušet hned, jak tě začne dusit pocit křivdy.",
+    "body_en": "**It Is What It Is**\n\nTry this when you're feeling: anger, sadness, frustration over unchangeable events. You'll need: Nothing.\n\nCeasing to fight reality halts the secondary suffering caused by psychological resistance, reducing escalation of the emotional response.\n\nThis works because ceasing to fight reality halts the secondary suffering caused by psychological resistance, reducing escalation of the emotional response. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Mám chuť něco rozbít.",
+    "headline_en": "I want to break something."
+  },
+  {
+    "id": "n04",
+    "nickname": "Vzory v přírodě",
+    "nickname_en": "Find Patterns",
+    "color": "#b0e2e8",
+    "related": [
+      "N04"
+    ],
+    "body_cs": "**Vzory v přírodě**\n\nJsi z toho všeho hluku a věcí uvnitř úplně přehlcený/á? Cítíš tak velký tlak, že ti jde z toho hlava kolem? Běž se podívat ven nebo se zastav u nejbližší pokojové kytky. Hledej vzory a detaily na listech nebo v kůře dřeva, které se neustále drobně opakují. Pozoruj ty jemné přírodní čáry a soustřeď na ně celou svou pozornost. Příroda ti pomůže srovnat si v sobě chaos, aniž bys musel/a moc přemýšlet.",
+    "body_en": "**Find Patterns**\n\nTry this when you're feeling: overwhelm, sensory overload indoors. You'll need: Leaf, tree bark.\n\nThe human visual system is optimized for natural fractals; processing these patterns significantly reduces physiological stress and strain.\n\nThis works because the human visual system is optimized for natural fractals; processing these patterns significantly reduces physiological stress and strain. You can do this outdoors or houseplant.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "n05",
+    "nickname": "Moje místo venku",
+    "nickname_en": "My Nature Spot",
+    "color": "#cbe5c2",
+    "related": [
+      "N05"
+    ],
+    "body_cs": "**Moje místo venku**\n\nDrtí tě chronický stres a úzkost ze školy? Cítíš obrovský smutek a potřebuješ uniknout od všeho tlaku? Vyraz na delší dobu někam pryč, ven do lesa, parku nebo prostě na své tajné místo v přírodě. Zůstaň tam úplně sám/sama, klidně aspoň dvacet minut, poslouchej okolní stromy a jen tam buď. Najdi si tohle své speciální místo a vracej se na něj vždycky, když tě ten školní svět přestane bavit.",
+    "body_en": "**My Nature Spot**\n\nTry this when you're feeling: chronic stress, school anxiety, sadness. You'll need: Nothing.\n\nSustained immersion in a natural environment significantly lowers cortisol levels, facilitating deep emotional processing away from pressures.\n\nThis works because sustained immersion in a natural environment significantly lowers cortisol levels, facilitating deep emotional processing away from pressures. You can do this safe outdoor space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "h03",
+    "nickname": "Krabice smíchu",
+    "nickname_en": "Laugh Box",
+    "color": "#b6b9e2",
+    "related": [
+      "H03"
+    ],
+    "body_cs": "**Krabice smíchu**\n\nSvírá tě úzkost, smutek a pořád dokola se vracíš k tomu nejhoršímu? Potřebuješ okamžitou záchranu před sebou samým/samou? Popadni okamžitě telefon a prohlédni si zásobu těch nejvtipnějších memů nebo obrázků, co tam máš. Nech se do toho zatáhnout a jen překlikávej, dokud tě něco aspoň trochu nerozesměje. Vždycky měj v galerii uloženou složku těchhle vtipných záchran.",
+    "body_en": "**Laugh Box**\n\nTry this when you're feeling: diffuse anxiety, sadness, rumination. You'll need: Smartphone / memes.\n\nRapidly introduces positive affective stimuli, triggering dopamine release and short-circuiting neural pathways processing sadness.\n\nThis works because rapidly introduces positive affective stimuli, triggering dopamine release and short-circuiting neural pathways processing sadness. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "h04",
+    "nickname": "Směšný filtr",
+    "nickname_en": "Silly Filter",
+    "color": "#c2ebbc",
+    "related": [
+      "H04"
+    ],
+    "body_cs": "**Směšný filtr**\n\nZžírá tě pocit hanby a strach z toho, že zase něco pokazíš? Bojíš se lidí a toho, co si o tobě myslí? Zkus vzít tu konkrétní strašnou situaci, které se bojíš, a představ si na ni absurdní, barevný filtr nebo vtipnou samolepku – třeba že všem lidem narostou obrovské králičí uši nebo klaunské nosy. Čím víc šílené to bude, tím míň ti ta představa dokáže ublížit. Nasazuj tenhle filtr před každou hrůznou situací.",
+    "body_en": "**Silly Filter**\n\nTry this when you're feeling: shame, social anxiety, fear of failure. You'll need: Nothing.\n\nMentally visualizing a feared scenario with an absurd filter structurally defuses the threat response associated with the memory.\n\nThis works because mentally visualizing a feared scenario with an absurd filter structurally defuses the threat response associated with the memory. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "h05",
+    "nickname": "Přitažené za vlasy",
+    "nickname_en": "Way Too Far",
+    "color": "#e7bcd5",
+    "related": [
+      "H05"
+    ],
+    "body_cs": "**Přitažené za vlasy**\n\nMáš hlavu plnou myšlenek na ty úplně nejhorší scénáře? Padá na tebe hrůza z toho, co všechno hrozného by se mohlo stát? Začni tu svoji nejhorší obavu schválně dál přehánět a dělat z ní něco ještě víc šíleného, až to bude úplně nemožné a bláznivé – třeba že celá škola odletí na Mars nebo něco podobného. Ukážeš tak svému mozku, jak nesmyslné to je, a ta těžká myšlenka ztratí svou děsivost.",
+    "body_en": "**Way Too Far**\n\nTry this when you're feeling: catastrophizing, thought spirals. You'll need: Nothing.\n\nIntentionally exaggerating an anxious thought until it becomes logically impossible exposes irrationality, inducing relief through paradox.\n\nThis works because intentionally exaggerating an anxious thought until it becomes logically impossible exposes irrationality, inducing relief through paradox. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Nedokážu vypnout hlavu.",
+    "headline_en": "I can't turn off my head."
+  },
+  {
+    "id": "h06",
+    "nickname": "Smějící se dech",
+    "nickname_en": "Laughing Breath",
+    "color": "#d8d3e8",
+    "related": [
+      "H06"
+    ],
+    "body_cs": "**Smějící se dech**\n\nCítíš obrovské napětí v celém těle a jsi plný/á smutku? Máš pocit, že dýcháš strašně mělce a nemůžeš popadnout dech? Zkus se schovat někam, kde budeš sám/sama, a na sílu začni vydávat naprosto přehnané, hlasité zvuky smíchu, jako bys hrál/a zlého padoucha v pohádce. Směj se klidně i potichu a prodlužuj tenhle chechtavý výdech na maximum. Za chvíli možná zjistíš, že tě ten upřímný smích vážně dostane, a uvolníš se.",
+    "body_en": "**Laughing Breath**\n\nTry this when you're feeling: physical tension, sadness. You'll need: Nothing.\n\nForced laughter alters respiratory patterns, extending exhalations to expel tension, eventually triggering genuine endorphin release.\n\nThis works because forced laughter alters respiratory patterns, extending exhalations to expel tension, eventually triggering genuine endorphin release. You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je mi hrozně smutno.",
+    "headline_en": "I feel so incredibly sad."
+  },
+  {
+    "id": "r04",
+    "nickname": "Tři kroky",
+    "nickname_en": "3-Step Switch",
+    "color": "#ede1ce",
+    "related": [
+      "R04"
+    ],
+    "body_cs": "**Tři kroky**\n\nŠtve tě škola a máš úzkost pokaždé, když musíš někam jít? Nezvládáš přechody z jednoho místa do druhého? Zaveď si přesné pravidlo tří rychlých kroků, když někam přijdeš: třeba si umyj ruce, dvakrát zhluboka vydechni a pak si sáhni na svůj batoh. Tenhle malý, přesný postup tvému mozku pokaždé spolehlivě řekne, že už je po nebezpečí a začíná nová fáze.",
+    "body_en": "**3-Step Switch**\n\nTry this when you're feeling: school stress, environmental transitions. You'll need: Nothing.\n\nA strict three-step sequence (e.g., wash hands, breathe, touch object) signals the brain that a stressful phase has ended and safety has begun.\n\nThis works because a strict three-step sequence (e.g., wash hands, breathe, touch object) signals the brain that a stressful phase has ended and safety has begun. You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline.",
+    "headline_cs": "Je toho na mě moc.",
+    "headline_en": "It's all too much."
+  },
+  {
+    "id": "b01",
+    "nickname": "Dýchání do čtverce",
+    "nickname_en": "Box Breath",
+    "color": "#f2bfab",
+    "related": [
+      "B01"
+    ],
+    "headline_cs": "",
+    "headline_en": "",
+    "body_cs": "**Dýchání do čtverce**\n\nSvírá se ti hrudník? Máš pocit, že nemůžeš popadnout dech nebo tě válcuje obrovský vztek? Představ si před sebou čtverec a očima jezdi po jeho hranách. Nadechni se na čtyři doby, když jedeš po horní straně, a zadrž dech na čtyři doby na pravé straně. Vydechni na čtyři doby dole a znovu zadrž dech na levé straně. Opakuj to dokola, dokud neobejdeš čtverec alespoň pětkrát. Kdykoliv tě přepadne panika, můžeš si čtverec nakreslit i prstem na stehno.",
+    "body_en": "**Box Breath**\n\nTry this when you're feeling: acute panic; diffuse anxiety; anger/rage; sleep difficulty; school-related stress. You'll need: Nothing.\n\nSlow exhalation activates vagus nerve → parasympathetic shift; extended exhale reduces heart rate and cortisol\n\nThis works because slow exhalation activates vagus nerve → parasympathetic shift; extended exhale reduces heart rate and cortisol You can do this anywhere (incl. school/public).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b02",
+    "nickname": "Hluboký dech",
+    "nickname_en": "Belly Breath",
+    "color": "#ddd5ea",
+    "related": [
+      "B02"
+    ],
+    "headline_cs": "",
+    "headline_en": "",
+    "body_cs": "**Hluboký dech**\n\nTočí se ti v hlavě nepříjemné myšlenky? Máš pocit, že ti srdce buší až v krku? Polož si obě ruce na břicho. Zhluboka se nadechni nosem tak, aby se ti břicho nafouklo jako velký balónek a odtlačilo tvoje ruce. Potom vzduch pomalu a dlouze vyfoukni pusou, jako bys chtěl/a zfouknout svíčku, až břicho zase splaskne. Udělej to takhle desetkrát po sobě. Můžeš si to zkusit i večer v posteli, než usneš, abys měl/a klidnější noc.",
+    "body_en": "**Belly Breath**\n\nTry this when you're feeling: acute panic; diffuse anxiety; anger/rage; rumination. You'll need: Nothing (optional: place hand on belly).\n\nDiaphragmatic expansion stimulates vagal afferents → lowers sympathetic arousal; engages interoception\n\nThis works because diaphragmatic expansion stimulates vagal afferents → lowers sympathetic arousal; engages interoception You can do this anywhere.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b04",
+    "nickname": "Rychlé vybití",
+    "nickname_en": "Power Sprint",
+    "color": "#cce8e8",
+    "related": [
+      "B04"
+    ],
+    "headline_cs": "",
+    "headline_en": "",
+    "body_cs": "**Rychlé vybití**\n\nSžírá tě vztek, který by mohl něco zničit? Máš chuť si ublížit nebo cítíš nezvladatelnou paniku? Vyraz ven, na chodbu nebo se postav doprostřed pokoje a minutu běž na místě tou největší rychlostí, jakou dokážeš. Můžeš u toho i skákat panáka nebo zběsile tancovat. Dej do toho úplně všechnu sílu, až se zadýcháš a zpotíš. Je úplně v pořádku, že máš v sobě tolik energie. Až to příště přijde, pusť si k tomu do sluchátek tu nejhlasitější písničku.",
+    "body_en": "**Power Sprint**\n\nTry this when you're feeling: anger/rage; acute panic; urge to self-harm; sadness/numbness. You'll need: Nothing (space to move).\n\nIntense exercise metabolizes stress hormones (adrenaline, cortisol); endorphin release; redirects proprioceptive focus from emotional to physical sensation\n\nThis works because intense exercise metabolizes stress hormones (adrenaline, cortisol); endorphin release; redirects proprioceptive focus from emotional to physical sensation You can do this needs some space (room, hallway, outdoors).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "b07",
+    "nickname": "Odtlačení zdi",
+    "nickname_en": "Wall Push",
+    "color": "#f5d0d8",
+    "related": [
+      "B07"
+    ],
+    "headline_cs": "",
+    "headline_en": "",
+    "body_cs": "**Odtlačení zdi**\n\nJsi plný/á vzteku a nevíš, co s ním? Chce se ti křičet nebo si ublížit? Najdi nejbližší pevnou zeď nebo futra od dveří. Opři se do zdi oběma rukama vší silou, jako bys ji chtěl/a odtlačit o kus dál. Zapři se nohama, zatni všechny svaly a tlač celou svou vahou alespoň deset vteřin. Pak povol a vydechni. Můžeš to udělat klidně i na záchodě ve škole, nikdo nic nepozná.",
+    "body_en": "**Wall Push**\n\nTry this when you're feeling: anger/rage; acute panic; urge to self-harm; school-related stress. You'll need: Wall or doorframe.\n\nIsometric muscle contraction provides heavy proprioceptive input → calming; redirects fight impulse into controlled physical effort without harm\n\nThis works because isometric muscle contraction provides heavy proprioceptive input → calming; redirects fight impulse into controlled physical effort without harm You can do this anywhere (very discreet — school corridor, bathroom).\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "sa01",
+    "nickname": "Pokec s plyšákem",
+    "nickname_en": "Talk to Toy",
+    "color": "#c5e6d0",
+    "related": [
+      "SA01"
+    ],
+    "headline_cs": "",
+    "headline_en": "",
+    "body_cs": "**Pokec s plyšákem**\n\nPřepadl tě smutek, úzkost a cítíš se strašně sám/sama? Cítíš obrovskou hanbu a nemáš nikoho, komu to říct? Vezmi si svého oblíbeného plyšáka, polštář nebo i domácího mazlíčka, jestli máš. Začni mu nahlas vykládat úplně všechno, co tě teď trápí a bolí. Povídej mu o svých pocitech bez obalu a cenzury. Možná, když si to natrénuješ s plyšákem, bude pro tebe příště jednodušší o tom promluvit i s opravdovým člověkem.",
+    "body_en": "**Talk to Toy**\n\nTry this when you're feeling: loneliness; sadness/numbness; shame; diffuse anxiety. You'll need: Stuffed animal, pillow, pet (if available), or any object.\n\nExternalization through dialogue with object; practices articulating feelings aloud; transitional object provides sense of connection and safety; reduces isolation feeling\n\nThis works because externalization through dialogue with object; practices articulating feelings aloud; transitional object provides sense of connection and safety; reduces isolation feeling You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  },
+  {
+    "id": "sa02",
+    "nickname": "Zkouška nanečisto",
+    "nickname_en": "Practice Talk",
+    "color": "#d8cfe6",
+    "related": [
+      "SA02"
+    ],
+    "headline_cs": "",
+    "headline_en": "",
+    "body_cs": "**Zkouška nanečisto**\n\nBojíš se s někým promluvit, je ti ze všeho úzko a cítíš se sám/sama? Padá na tebe stres ze školy a máš pocit, že to nedokážeš nikomu říct? Zalez si k sobě do pokoje, stoupni si před zrcadlo nebo jen do prostoru. Zkus si celou tu děsivou konverzaci nahlas odříkat nanečisto. Říkej věty přesně tak, jak bys je pak řekl/a doopravdy. Tohle trénování ti může dát odvahu zvednout telefon a vytočit linku bezpečí, kde ti určitě někdo rád pomůže.",
+    "body_en": "**Practice Talk**\n\nTry this when you're feeling: shame; school-related stress; loneliness; diffuse anxiety. You'll need: Nothing (optional: mirror).\n\nBehavioral rehearsal reduces anticipatory anxiety about real disclosure; builds self-efficacy for help-seeking; desensitizes through repeated exposure to feared conversation\n\nThis works because behavioral rehearsal reduces anticipatory anxiety about real disclosure; builds self-efficacy for help-seeking; desensitizes through repeated exposure to feared conversation You can do this private space.\n\nIf this doesn't help you, please don't hesitate to reach out to a trusted adult or a helpline."
+  }
+]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Databáze copingových metod</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site">
+      <h1 id="title">Databáze copingových metod</h1>
+      <p class="lead" id="lead">
+        Interaktivní průvodce strategiemi zvládání pro děti a dospívající (8–18 let). Vyhledej podle nálady, modality nebo náročnosti.
+      </p>
+    </header>
+
+    <div class="toolbar">
+      <div class="search-row">
+        <label class="visually-hidden" for="q" id="searchLabel">Hledat</label>
+        <input type="search" id="q" autocomplete="off" />
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Jazyk">
+        <button type="button" id="lang-cs" aria-pressed="true">Čeština</button>
+        <button type="button" id="lang-en" aria-pressed="false">English</button>
+      </div>
+    </div>
+
+    <div class="age-filter">
+      <span id="lbl-age">Věk</span>
+      <div class="age-selector" id="f-age" role="group" aria-label="Výběr věku">
+        <button type="button" class="age-btn active" data-val="">Vše</button>
+        <button type="button" class="age-btn" data-val="8">8</button>
+        <button type="button" class="age-btn" data-val="9">9</button>
+        <button type="button" class="age-btn" data-val="10">10</button>
+        <button type="button" class="age-btn" data-val="11">11</button>
+        <button type="button" class="age-btn" data-val="12">12</button>
+        <button type="button" class="age-btn" data-val="13">13</button>
+        <button type="button" class="age-btn" data-val="14">14</button>
+        <button type="button" class="age-btn" data-val="15">15</button>
+        <button type="button" class="age-btn" data-val="16">16</button>
+        <button type="button" class="age-btn" data-val="17">17</button>
+        <button type="button" class="age-btn" data-val="18">18</button>
+      </div>
+    </div>
+
+    <div class="filters">
+      <label>
+        <span id="lbl-modality">Modalita</span>
+        <select id="f-modality">
+          <option value="">—</option>
+        </select>
+      </label>
+      <label>
+        <span id="lbl-state">Cílový emoční stav</span>
+        <select id="f-state">
+          <option value="">—</option>
+        </select>
+      </label>
+      <label>
+        <span id="lbl-energy">Aktivační energie</span>
+        <select id="f-energy">
+          <option value="">—</option>
+        </select>
+      </label>
+      <label>
+        <span id="lbl-evidence">Síla evidence</span>
+        <select id="f-evidence">
+          <option value="">—</option>
+        </select>
+      </label>
+      <label>
+        <span id="lbl-age">Věk</span>
+        <select id="f-age">
+          <option value="">—</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="meta-bar" id="meta"></div>
+    <main class="grid" id="grid" aria-live="polite"></main>
+    <p class="empty" id="empty" hidden></p>
+
+    <footer class="note">
+      <p><a href="kids.html" id="kids-link">Kartičky pro děti a dospívající</a></p>
+      <p id="footnote"></p>
+    </footer>
+
+    <dialog class="panel" id="detail" aria-labelledby="detail-title">
+      <div class="panel-inner">
+        <header>
+          <span class="id" id="detail-id"></span>
+          <h2 id="detail-title"></h2>
+        </header>
+        <dl class="fields" id="detail-fields"></dl>
+        <div class="close-row">
+          <button type="button" class="close" id="detail-close"></button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
