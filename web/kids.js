@@ -124,7 +124,7 @@ const MOD_COLORS = {
 /* ─── UI text ─── */
 const UI = {
   cs: {
-    title: "🌈 Kartičky zvládání",
+    title: "🌈 Kartičky uvolňovacích metod",
     lead: "Vyber si, co se ti teď hodí. Klikni a rozbal.",
     accModality: "🎯 Co chci dělat?",
     accState: "💭 Co cítím?",
