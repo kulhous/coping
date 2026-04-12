@@ -1,3 +1,5 @@
+import { parseMd } from "./parse_md.js";
+
 const STORAGE_KEY = "coping-methods-lang";
 
 const FIELD_ORDER = [
@@ -304,7 +306,8 @@ function main() {
       pills.append(pMod, pEn);
       const mech = document.createElement("p");
       mech.className = "mechanism";
-      mech.textContent = row["Brief Mechanism"] || "";
+      const mechRaw = row["Brief Mechanism"] || "";
+      mech.innerHTML = mechRaw ? parseMd(mechRaw) : "";
       const footer = document.createElement("footer");
       const ev = document.createElement("span");
       ev.className = "pill";
@@ -356,8 +359,7 @@ function main() {
         cardBox.style.padding = "12px";
         cardBox.style.borderRadius = "8px";
         cardBox.style.color = "#000";
-        const parsedBody = body.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
-        cardBox.innerHTML = `<strong>${headline}</strong><br><br>${parsedBody}`;
+        cardBox.innerHTML = `<strong>${headline}</strong><br><br>${body.replace(/\n/g, '<br>')}`;
         dd.appendChild(cardBox);
       }
       dlgFields.append(dt, dd);

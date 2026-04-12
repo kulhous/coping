@@ -1,3 +1,5 @@
+import { parseMd } from "./parse_md.js";
+
 const LANG_KEY = "coping-methods-lang";
 
 /* ─── Kid-friendly modality labels ─── */
@@ -249,7 +251,6 @@ function main() {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "chip";
-    btn.dataset.key = value;
     btn.textContent = label;
     btn.setAttribute("aria-pressed", sel[dimension] === value ? "true" : "false");
     btn.addEventListener("click", () => {
@@ -261,33 +262,16 @@ function main() {
   }
 
   function syncChips() {
-    Object.keys(MOD_MAP.en).forEach(k => {
-      const b = bubMod.querySelector(`.chip[data-key="${k}"]`) || chipsMod.querySelector(`.chip[data-key="${k}"]`);
-      if (b) {
-        b.setAttribute("aria-pressed", sel.modality === k ? "true" : "false");
-        chipsMod.appendChild(b);
-        if (sel.modality === k) bubMod.insertBefore(b, chipsMod);
-      }
+    [...chipsMod.children].forEach((b, i) => {
+      const key = Object.keys(MOD_MAP.en)[i];
+      b.setAttribute("aria-pressed", sel.modality === key ? "true" : "false");
     });
-
-    STATE_ORDER.forEach(k => {
-      const b = bubState.querySelector(`.chip[data-key="${k}"]`) || chipsState.querySelector(`.chip[data-key="${k}"]`);
-      if (b) {
-        b.setAttribute("aria-pressed", sel.state === k ? "true" : "false");
-        chipsState.appendChild(b);
-        if (sel.state === k) bubState.insertBefore(b, chipsState);
-      }
+    [...chipsState.children].forEach((b, i) => {
+      b.setAttribute("aria-pressed", sel.state === STATE_ORDER[i] ? "true" : "false");
     });
-
-    ENERGY_ORDER.forEach(k => {
-      const b = bubEnergy.querySelector(`.chip[data-key="${k}"]`) || chipsNrg.querySelector(`.chip[data-key="${k}"]`);
-      if (b) {
-        b.setAttribute("aria-pressed", sel.energy === k ? "true" : "false");
-        chipsNrg.appendChild(b);
-        if (sel.energy === k) bubEnergy.insertBefore(b, chipsNrg);
-      }
+    [...chipsNrg.children].forEach((b, i) => {
+      b.setAttribute("aria-pressed", sel.energy === ENERGY_ORDER[i] ? "true" : "false");
     });
-
     if (chipsAge) {
       [...chipsAge.children].forEach(b => {
         const v = b.dataset.val;
@@ -393,7 +377,7 @@ function main() {
 
     const prev = document.createElement("p");
     prev.className = "card-preview";
-    prev.innerHTML = preview.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    prev.innerHTML = preview ? parseMd(preview) : "";
 
     const pills = document.createElement("div");
     pills.className = "card-pills";
@@ -450,12 +434,8 @@ function main() {
     dlgHead.textContent = headline;
 
     if (kid) {
-      let text = lang === "en" ? (kid.body_en || "") : (kid.body_cs || "");
-      // Simple markdown parser for bold and bullet points
-      text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      text = text.replace(/\n\*\s+(.*)/g, '<br>• $1');
-      text = text.replace(/\n/g, '<br>');
-      dlgText.innerHTML = text;
+      const text = lang === "en" ? (kid.body_en || "") : (kid.body_cs || "");
+      dlgText.innerHTML = parseMd(text);
     } else {
       const parts = [];
       if (row["Brief Mechanism"]) parts.push(row["Brief Mechanism"]);
