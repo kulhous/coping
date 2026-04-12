@@ -73,6 +73,25 @@ header.site p.lead {
   max-width: 52ch;
 }
 
+header.site .header-row {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.kids-view-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.kids-view-link:hover {
+  text-decoration: underline;
+}
+
 .toolbar {
   max-width: 1200px;
   margin: 0 auto;

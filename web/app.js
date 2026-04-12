@@ -231,6 +231,8 @@ function main() {
     if (btnAllAge) btnAllAge.textContent = g.optAll;
     foot.textContent = g.footnote;
     document.getElementById("kids-link").textContent = g.kidsLink;
+    const kidsHeader = document.getElementById("kids-header-link");
+    if (kidsHeader) kidsHeader.textContent = g.kidsLink;
     dlgClose.textContent = g.close;
     rebuildFilterOptions();
     render();
