@@ -251,6 +251,7 @@ function main() {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "chip";
+    btn.dataset.filterKey = value;
     btn.textContent = label;
     btn.setAttribute("aria-pressed", sel[dimension] === value ? "true" : "false");
     btn.addEventListener("click", () => {
@@ -261,17 +262,27 @@ function main() {
     return btn;
   }
 
+  /** Keep tray collapsed when not hovered; move the active chip above the tray so it stays visible. */
+  function repositionFilterChips(bubble, tray, keys, selectedKey) {
+    keys.forEach((k) => {
+      let btn = tray.querySelector(`button[data-filter-key="${k}"]`);
+      if (!btn) btn = bubble.querySelector(`:scope > button.chip[data-filter-key="${k}"]`);
+      if (btn) tray.appendChild(btn);
+    });
+    keys.forEach((k) => {
+      const btn = tray.querySelector(`button[data-filter-key="${k}"]`);
+      if (btn) btn.setAttribute("aria-pressed", selectedKey === k ? "true" : "false");
+    });
+    if (selectedKey) {
+      const selBtn = tray.querySelector(`button[data-filter-key="${selectedKey}"]`);
+      if (selBtn) bubble.insertBefore(selBtn, tray);
+    }
+  }
+
   function syncChips() {
-    [...chipsMod.children].forEach((b, i) => {
-      const key = Object.keys(MOD_MAP.en)[i];
-      b.setAttribute("aria-pressed", sel.modality === key ? "true" : "false");
-    });
-    [...chipsState.children].forEach((b, i) => {
-      b.setAttribute("aria-pressed", sel.state === STATE_ORDER[i] ? "true" : "false");
-    });
-    [...chipsNrg.children].forEach((b, i) => {
-      b.setAttribute("aria-pressed", sel.energy === ENERGY_ORDER[i] ? "true" : "false");
-    });
+    repositionFilterChips(bubMod, chipsMod, Object.keys(MOD_MAP.en), sel.modality);
+    repositionFilterChips(bubState, chipsState, STATE_ORDER, sel.state);
+    repositionFilterChips(bubEnergy, chipsNrg, ENERGY_ORDER, sel.energy);
     if (chipsAge) {
       [...chipsAge.children].forEach(b => {
         const v = b.dataset.val;
@@ -434,7 +445,8 @@ function main() {
     dlgHead.textContent = headline;
 
     if (kid) {
-      const text = lang === "en" ? (kid.body_en || "") : (kid.body_cs || "");
+      let text = lang === "en" ? (kid.body_en || "") : (kid.body_cs || "");
+      text = text.replace(/^\*\*[^*]+\*\*\n+/, "");
       dlgText.innerHTML = parseMd(text);
     } else {
       const parts = [];
