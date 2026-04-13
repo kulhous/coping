@@ -17,6 +17,7 @@
   --accent: #5b8def;
   --radius: 16px;
   --max-w: 960px;
+  --detail-card-ratio: 0.68;
 }
 
 html {
@@ -305,12 +306,44 @@ body {
   margin: 0.65rem auto 0;
   padding: 0 1rem;
   min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .count {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--muted);
+}
+
+.random-btn {
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffd97d 0%, #ffc36b 100%);
+  color: #5a431a;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0.55rem 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 195, 107, 0.32);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.random-btn:hover,
+.random-btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(255, 195, 107, 0.4);
+  outline: none;
+}
+
+.random-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
 }
 
 @media (max-width: 520px) {
@@ -346,10 +379,11 @@ body {
 
 /* ===== Card ===== */
 .card {
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 4px);
   overflow: hidden;
-  background: var(--surface);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f2e8 100%);
+  border: 1px solid rgba(94, 74, 42, 0.18);
+  box-shadow: 0 10px 22px rgba(94, 74, 42, 0.12);
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.2s;
@@ -360,74 +394,133 @@ body {
 .card:hover,
 .card:focus-visible {
   transform: translateY(-5px) scale(1.015);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 18px 34px rgba(94, 74, 42, 0.18);
   outline: none;
 }
 
+.card-art-frame {
+  padding: 0.6rem 0.6rem 0;
+}
+
 .card-color {
-  aspect-ratio: 1 / 0.72;
+  aspect-ratio: 1 / 1;
   display: flex;
-  align-items: flex-end;
-  padding: 1rem 1.15rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.9rem 0.9rem 0.8rem;
   position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(94, 74, 42, 0.08);
+}
+
+.card-color::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.72), transparent 52%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.04));
+  pointer-events: none;
+}
+
+.card-art {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.08));
+  position: relative;
+  margin-top: 0.55rem;
+  z-index: 1;
 }
 
 .card-emoji {
   position: absolute;
-  top: 0.65rem;
-  right: 0.75rem;
-  font-size: 1.6rem;
+  top: 0.55rem;
+  right: 0.6rem;
+  font-size: 1.15rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 252, 245, 0.78);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-title-plate {
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 1.15rem;
+  z-index: 2;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .card-nickname {
+  display: block;
   font-family: var(--hand);
-  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-size: clamp(1.45rem, 3.8vw, 1.95rem);
   font-weight: 700;
-  color: #333;
+  color: #3c2f24;
   line-height: 1;
+  text-align: center;
+  text-shadow:
+    0 2px 0 rgba(255, 248, 238, 0.95),
+    0 0 12px rgba(255, 248, 238, 0.8);
 }
 
 .card-body {
-  padding: 0.75rem 1rem 1rem;
-  text-align: center;
+  padding: 0.85rem 1rem 1rem;
+  text-align: left;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.35rem;
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.95), rgba(250, 245, 235, 0.96));
 }
 
 .card-headline {
   margin: 0;
   font-size: 1rem;
   font-weight: 800;
+  color: #2f261e;
 }
 
 .card-preview {
   margin: 0;
-  font-size: 0.85rem;
-  color: var(--muted);
+  font-size: 0.88rem;
+  color: #695d4b;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 3.9em;
 }
 
 .card-pills {
   margin-top: auto;
-  padding-top: 0.5rem;
+  padding-top: 0.65rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
 .card-pill {
   font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.15rem 0.5rem;
+  font-weight: 700;
+  padding: 0.18rem 0.52rem;
   border-radius: 999px;
-  background: #f5f0e8;
-  color: #8a7a5e;
+  background: #f5ede0;
+  color: #7c6245;
+  border: 1px solid rgba(124, 98, 69, 0.12);
 }
 
 /* ===== Empty state ===== */
@@ -443,20 +536,19 @@ body {
 /* ===== Detail dialog ===== */
 dialog#detail {
   border: 0;
-  border-radius: 20px;
   padding: 0;
-  max-width: min(560px, 94vw);
-  width: 100%;
-  background: var(--surface);
+  width: min(470px, calc(100vw - 6rem), calc((92vh - 2rem) * var(--detail-card-ratio)));
+  background: transparent;
   color: var(--text);
-  box-shadow: 0 16px 56px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
-  max-height: min(85vh, 720px);
+  overflow: visible;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  perspective: 1400px;
 }
 
 dialog#detail[open] {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 dialog#detail::backdrop {
@@ -466,80 +558,308 @@ dialog#detail::backdrop {
 
 .dialog-scroll {
   overflow-y: auto;
-  flex: 1;
+  min-height: 0;
+  padding: 0 0.2rem 0.2rem;
 }
 
-.dialog-color {
-  flex-shrink: 0;
-  padding: 1.2rem 1.6rem 1rem;
+.dialog-card {
+  width: 100%;
+  aspect-ratio: var(--detail-card-ratio) / 1;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  padding: 0.62rem;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f2e8 100%);
+  border-radius: calc(var(--radius) + 8px);
+  border: 1px solid rgba(94, 74, 42, 0.18);
+  box-shadow: 0 20px 52px rgba(94, 74, 42, 0.22);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
   position: relative;
 }
 
-.dialog-header-inner {
+.dialog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+.dialog-card-ghost {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dialog-card.is-entering-next,
+.dialog-card.is-entering-prev,
+.dialog-card-ghost.is-leaving-next,
+.dialog-card-ghost.is-leaving-prev {
+  animation-duration: 1100ms;
+  animation-timing-function: cubic-bezier(0.18, 0.66, 0.14, 1);
+  animation-fill-mode: both;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity, filter;
+}
+
+.dialog-card.is-entering-next,
+.dialog-card-ghost.is-leaving-next {
+  transform-origin: left center;
+}
+
+.dialog-card.is-entering-prev,
+.dialog-card-ghost.is-leaving-prev {
+  transform-origin: right center;
+}
+
+.dialog-card.is-entering-next {
+  transform-origin: right center;
+}
+
+.dialog-card.is-entering-prev {
+  transform-origin: left center;
+}
+
+.dialog-card.is-entering-next {
+  animation-name: detail-card-in-next;
+  animation-delay: 250ms;
+}
+
+.dialog-card.is-entering-prev {
+  animation-name: detail-card-in-prev;
+  animation-delay: 250ms;
+}
+
+.dialog-card-ghost.is-leaving-next {
+  animation-name: detail-card-out-next;
+}
+
+.dialog-card-ghost.is-leaving-prev {
+  animation-name: detail-card-out-prev;
+}
+
+@keyframes detail-card-out-next {
+  from {
+    transform: rotateY(0deg) translateX(0) scale(1);
+  }
+  to {
+    transform: rotateY(-90deg) translateX(-4%) scale(0.985);
+  }
+}
+
+@keyframes detail-card-in-next {
+  from {
+    transform: rotateY(90deg) translateX(4%) scale(0.985);
+  }
+  to {
+    transform: rotateY(0deg) translateX(0) scale(1);
+  }
+}
+
+@keyframes detail-card-out-prev {
+  from {
+    transform: rotateY(0deg) translateX(0) scale(1);
+  }
+  to {
+    transform: rotateY(90deg) translateX(4%) scale(0.985);
+  }
+}
+
+@keyframes detail-card-in-prev {
+  from {
+    transform: rotateY(-90deg) translateX(-4%) scale(0.985);
+  }
+  to {
+    transform: rotateY(0deg) translateX(0) scale(1);
+  }
+}
+
+.dialog-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  width: 2.9rem;
+  height: 2.9rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #4a4032;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.dialog-nav:hover,
+.dialog-nav:focus-visible {
+  transform: translateY(-50%) scale(1.04);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.dialog-nav[hidden] {
+  display: none;
+}
+
+.dialog-nav-prev {
+  left: -3.6rem;
+}
+
+.dialog-nav-next {
+  right: -3.6rem;
+}
+
+.dialog-color {
+  aspect-ratio: 1 / 0.68;
+  padding: 0.8rem 0.85rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 2px);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(94, 74, 42, 0.08);
+}
+
+.dialog-color::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.72), transparent 52%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.04));
+  pointer-events: none;
+}
+
+.dialog-color::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--detail-art);
+  background-repeat: no-repeat;
+  background-position: center 44%;
+  background-size: min(44%, 190px);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+
+.dialog-color[data-has-art="true"]::after {
+  opacity: 0.96;
+  transform: translateY(0);
+}
+
+.dialog-color > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dialog-title-plate {
+  display: none;
+}
+
+.dialog-top-bar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
+  padding: 0.1rem 0.15rem 0;
+}
+
+.dialog-meta {
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
 .dialog-nickname {
   font-family: var(--hand);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #333;
-  line-height: 1.1;
+  color: #3c2f24;
+  line-height: 1.15;
   margin: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .btn-close-icon {
-  background: transparent;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 252, 245, 0.82);
   border: 0;
-  font-size: 1.8rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
   line-height: 1;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(60, 47, 36, 0.72);
   cursor: pointer;
   padding: 0;
-  margin-top: -0.2rem;
-  margin-right: -0.4rem;
-  transition: color 0.15s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  margin-left: 0.4rem;
 }
 
-.btn-close-icon:hover {
-  color: rgba(0, 0, 0, 0.8);
+.btn-close-icon:hover,
+.btn-close-icon:focus-visible {
+  background: rgba(255, 255, 255, 0.96);
+  color: rgba(60, 47, 36, 0.92);
+  transform: scale(1.04);
+  outline: none;
 }
 
 .dialog-body {
-  padding: 1.1rem 1.5rem 1.5rem;
+  min-height: 100%;
+  padding: 0.05rem 0.65rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.95), rgba(250, 245, 235, 0.96));
+  border-radius: 0 0 calc(var(--radius) + 2px) calc(var(--radius) + 2px);
 }
 
 .dialog-body h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1.2rem;
+  margin: 0;
+  font-size: 1.13rem;
   font-weight: 800;
+  color: #2f261e;
 }
 
 .dialog-text {
   font-size: 0.97rem;
-  line-height: 1.7;
+  line-height: 1.52;
   white-space: pre-line;
-  color: #444;
-}
-
-.dialog-meta {
-  margin-top: 0.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  color: #5f5241;
 }
 
 .dialog-meta .dm-pill {
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.2rem 0.52rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
-  color: #554a36;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 252, 245, 0.84);
+  color: #6a5338;
+  border: 1px solid rgba(124, 98, 69, 0.16);
+  box-shadow: 0 2px 8px rgba(94, 74, 42, 0.08);
 }
 
 /* ===== Footer ===== */
@@ -562,6 +882,16 @@ dialog#detail::backdrop {
 
 /* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
+  .random-btn,
+  .dialog-nav {
+    transition: opacity 0.12s ease;
+  }
+  .dialog-card.is-entering-next,
+  .dialog-card.is-entering-prev,
+  .dialog-card-ghost.is-leaving-next,
+  .dialog-card-ghost.is-leaving-prev {
+    animation: none;
+  }
   .card:hover {
     transform: none;
   }
@@ -594,6 +924,70 @@ dialog#detail::backdrop {
   }
   html {
     scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  dialog#detail {
+    width: min(calc(100vw - 4.5rem), calc((88vh - 1.5rem) * var(--detail-card-ratio)));
+  }
+
+  .dialog-nav {
+    top: 50%;
+    bottom: auto;
+    width: 2.6rem;
+    height: 2.6rem;
+    transform: translateY(-50%);
+  }
+
+  .dialog-nav:hover,
+  .dialog-nav:focus-visible {
+    transform: translateY(-50%) scale(1.04);
+  }
+
+  .dialog-nav-prev {
+    left: -1.3rem;
+  }
+
+  .dialog-nav-next {
+    right: -1.3rem;
+  }
+
+  .dialog-body {
+    padding: 0.05rem 0.8rem 0.95rem;
+  }
+}
+
+@media (max-width: 420px) {
+  dialog#detail {
+    width: min(calc(100vw - 3.4rem), calc((86vh - 1rem) * var(--detail-card-ratio)));
+  }
+
+  .dialog-card {
+    padding: 0.5rem;
+    gap: 0.62rem;
+  }
+
+  .dialog-title-plate {
+    left: 0.6rem;
+    right: 0.6rem;
+    bottom: 0.9rem;
+  }
+
+  .dialog-meta {
+    left: 0.58rem;
+    right: 3.1rem;
+    bottom: 3.65rem;
+    gap: 0.28rem;
+  }
+
+  .dialog-nickname {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+  }
+
+  .btn-close-icon {
+    top: 0.5rem;
+    right: 0.52rem;
   }
 }
 

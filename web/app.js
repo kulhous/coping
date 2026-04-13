@@ -196,6 +196,7 @@ function main() {
   const dlgId = document.getElementById("detail-id");
   const dlgFields = document.getElementById("detail-fields");
   const dlgClose = document.getElementById("detail-close");
+  const dlgCloseX = document.getElementById("detail-close-x");
 
   let records = [];
   let lang = localStorage.getItem(STORAGE_KEY) || "cs";
@@ -288,6 +289,11 @@ function main() {
       const row = lang === "en" ? r.en : r.cs;
       const card = document.createElement("article");
       card.className = "card";
+      card.style.cursor = "pointer";
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("button")) return;
+        openDetail(r);
+      });
       const header = document.createElement("header");
       const idSpan = document.createElement("span");
       idSpan.className = "id";
@@ -341,7 +347,11 @@ function main() {
       const dt = document.createElement("dt");
       dt.textContent = g.fields[key] || key;
       const dd = document.createElement("dd");
-      dd.textContent = val;
+      if (key === "Brief Mechanism" || key === "Czech Adaptation Notes") {
+        dd.innerHTML = parseMd(val);
+      } else {
+        dd.textContent = val;
+      }
       dlgFields.append(dt, dd);
     }
 
@@ -357,20 +367,29 @@ function main() {
         const body = lang === "en" ? kc.body_en : kc.body_cs;
         const color = kc.color || "#eee";
         const cardBox = document.createElement("div");
+        cardBox.className = "kids-card-preview";
         cardBox.style.backgroundColor = color;
-        cardBox.style.padding = "12px";
-        cardBox.style.borderRadius = "8px";
-        cardBox.style.color = "#000";
-        cardBox.innerHTML = `<strong>${headline}</strong><br><br>${body.replace(/\n/g, '<br>')}`;
+        const strong = document.createElement("strong");
+        strong.textContent = headline || "";
+        cardBox.appendChild(strong);
+        cardBox.appendChild(document.createElement("br"));
+        cardBox.appendChild(document.createElement("br"));
+        const bodyText = (body || "").split("\n");
+        bodyText.forEach((line, i) => {
+          cardBox.appendChild(document.createTextNode(line));
+          if (i < bodyText.length - 1) cardBox.appendChild(document.createElement("br"));
+        });
         dd.appendChild(cardBox);
       }
       dlgFields.append(dt, dd);
     }
 
     dlg.showModal();
+    document.querySelector(".panel-inner").scrollTop = 0;
   }
 
   dlgClose.addEventListener("click", () => dlg.close());
+  dlgCloseX.addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", (e) => {
     if (e.target === dlg) dlg.close();
   });

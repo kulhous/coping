@@ -121,17 +121,146 @@ const MOD_COLORS = {
   Nature: "#c5e6d0", Humor: "#fef3e2", Ritual: "#eee5c8",
 };
 
+const CARD_ART = {
+  B01: {
+    src: "assets/box_breath.svg?v=20260413-1",
+    alt: {
+      cs: "Ilustrace dýchání do čtverce",
+      en: "Box Breath illustration",
+    },
+  },
+  B05: {
+    src: "assets/butterfly_hug.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace motýlího objetí",
+      en: "Butterfly Hug illustration",
+    },
+  },
+  B06: {
+    src: "assets/shake_it_out.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace vyklepání",
+      en: "Shake It Out illustration",
+    },
+  },
+  B10: {
+    src: "assets/self_hug.svg?v=20260413-1",
+    alt: {
+      cs: "Ilustrace pevného objetí",
+      en: "Self-Hug illustration",
+    },
+  },
+  C01: {
+    src: "assets/color_my_mood.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace barev pocitů",
+      en: "Color My Mood illustration",
+    },
+  },
+  C02: {
+    src: "assets/brain_dump.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace výplachu hlavy",
+      en: "Brain Dump illustration",
+    },
+  },
+  C03: {
+    src: "assets/secret_letter.svg?v=20260413-1",
+    alt: {
+      cs: "Ilustrace tajného dopisu",
+      en: "Secret Letter illustration",
+    },
+  },
+  C05: {
+    src: "assets/mood_dj.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace DJ nálady",
+      en: "Mood DJ illustration",
+    },
+  },
+  C10: {
+    src: "assets/body_map.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace mapy těla",
+      en: "Body Map illustration",
+    },
+  },
+  K05: {
+    src: "assets/stop_sign.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace stopky",
+      en: "STOP Sign illustration",
+    },
+  },
+  K06: {
+    src: "assets/urge_surfing.svg?v=20260413-1",
+    alt: {
+      cs: "Ilustrace jízdy na vlně",
+      en: "Urge Surfing illustration",
+    },
+  },
+  R01: {
+    src: "assets/coping_kit.svg?v=20260413-1",
+    alt: {
+      cs: "Ilustrace krabičky záchrany",
+      en: "Coping Kit illustration",
+    },
+  },
+  S01: {
+    src: "assets/5_senses.svg?v=20260413-1",
+    alt: {
+      cs: "Ilustrace pěti smyslů",
+      en: "5 Senses illustration",
+    },
+  },
+  S04: {
+    src: "assets/sour_candy.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace silné chuti",
+      en: "Sour Candy illustration",
+    },
+  },
+  S05: {
+    src: "assets/cold_splash.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace studené vody",
+      en: "Cold Splash illustration",
+    },
+  },
+  S06: {
+    src: "assets/my_playlist.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace mého playlistu",
+      en: "My Playlist illustration",
+    },
+  },
+  S07: {
+    src: "assets/heavy_blanket.svg?v=20260413-2",
+    alt: {
+      cs: "Ilustrace těžké deky",
+      en: "Heavy Blanket illustration",
+    },
+  },
+};
+
+function getCardArt(methodId) {
+  return CARD_ART[methodId] || null;
+}
+
 /* ─── UI text ─── */
 const UI = {
   cs: {
     title: "🌈 Kartičky uvolňovacích metod",
     lead: "Vyber si, co se ti teď hodí. Klikni a rozbal.",
+    random: "🎲 Náhodná kartička",
     accModality: "🎯 Co chci dělat?",
     accState: "💭 Co cítím?",
     accEnergy: "🔋 Kolik mám síly?",
     accAge: "🎂 Kolik mi je?",
     optAll: "Vše",
     close: "Zavřít",
+    prev: "Předchozí kartička",
+    next: "Další kartička",
     proLink: "📋 Odborný přehled",
     count: (n, t) => `${n} z ${t} kartiček`,
     empty: "🤷 Nic tu není — zkus jinou kombinaci.",
@@ -144,12 +273,15 @@ const UI = {
   en: {
     title: "🌈 Coping cards",
     lead: "Pick what fits right now. Tap and explore.",
+    random: "🎲 Random card",
     accModality: "🎯 What do I want to do?",
     accState: "💭 What do I feel?",
     accEnergy: "🔋 How much energy do I have?",
     accAge: "🎂 How old am I?",
     optAll: "All",
     close: "Close",
+    prev: "Previous card",
+    next: "Next card",
     proLink: "📋 Professional view",
     count: (n, t) => `${n} of ${t} cards`,
     empty: "🤷 Nothing here — try a different combo.",
@@ -173,14 +305,21 @@ function main() {
   const bubState  = $("bub-state");
   const bubEnergy = $("bub-energy");
   const dlg       = $("detail");
+  const dlgCard   = $("detail-card");
   const dlgColor  = $("detail-color");
   const dlgNick   = $("detail-nickname");
   const dlgHead   = $("detail-headline");
   const dlgText   = $("detail-text");
   const dlgMeta   = $("detail-meta");
   const dlgClose  = $("detail-close");
+  const dlgScroll = $("detail-scroll");
+  const dlgPrev   = $("detail-prev");
+  const dlgNext   = $("detail-next");
   const btnCs     = $("lang-cs");
   const btnEn     = $("lang-en");
+  const randomBtn = $("random-card");
+  const rootEl    = document.documentElement;
+  const bodyEl    = document.body;
   const chipsMod  = $("chips-modality");
   const chipsState= $("chips-state");
   const chipsNrg  = $("chips-energy");
@@ -192,10 +331,71 @@ function main() {
   let kidsCards = [];     // from kids_cards.json
   let kidsMap = {};       // method_id -> kids card
   let enriched = [];      // methods with computed fields
+  let visibleCards = [];
+  let activeModalCards = [];
+  let activeModalIndex = -1;
+  let detailTransitionBusy = false;
+  let detailReturnFocusEl = null;
+  let detailScrollSnapshot = null;
+  let detailScrollLockStyles = null;
   let lang = localStorage.getItem(LANG_KEY) || "cs";
 
   // Active filters
   const sel = { modality: new Set(), state: new Set(), energy: new Set(), age: null };
+
+  function getViewportScroll() {
+    return { x: window.scrollX, y: window.scrollY };
+  }
+
+  function restoreViewportScroll(pos) {
+    if (!pos) return;
+    window.scrollTo(pos.x, pos.y);
+  }
+
+  function stabilizeViewport(pos) {
+    if (!pos) return;
+    restoreViewportScroll(pos);
+    requestAnimationFrame(() => {
+      restoreViewportScroll(pos);
+      requestAnimationFrame(() => restoreViewportScroll(pos));
+    });
+    setTimeout(() => restoreViewportScroll(pos), 0);
+    setTimeout(() => restoreViewportScroll(pos), 50);
+  }
+
+  function lockBackgroundScroll() {
+    if (detailScrollLockStyles) return;
+    const pos = getViewportScroll();
+    detailScrollSnapshot = pos;
+    detailScrollLockStyles = {
+      rootOverflow: rootEl.style.overflow,
+      bodyOverflow: bodyEl.style.overflow,
+      bodyPosition: bodyEl.style.position,
+      bodyInset: bodyEl.style.inset,
+      bodyTop: bodyEl.style.top,
+      bodyWidth: bodyEl.style.width,
+    };
+    rootEl.style.overflow = "hidden";
+    bodyEl.style.overflow = "hidden";
+    bodyEl.style.position = "fixed";
+    bodyEl.style.inset = "0";
+    bodyEl.style.top = `-${pos.y}px`;
+    bodyEl.style.width = "100%";
+  }
+
+  function unlockBackgroundScroll() {
+    const pos = detailScrollSnapshot;
+    if (detailScrollLockStyles) {
+      rootEl.style.overflow = detailScrollLockStyles.rootOverflow;
+      bodyEl.style.overflow = detailScrollLockStyles.bodyOverflow;
+      bodyEl.style.position = detailScrollLockStyles.bodyPosition;
+      bodyEl.style.inset = detailScrollLockStyles.bodyInset;
+      bodyEl.style.top = detailScrollLockStyles.bodyTop;
+      bodyEl.style.width = detailScrollLockStyles.bodyWidth;
+      detailScrollLockStyles = null;
+    }
+    stabilizeViewport(pos);
+  }
 
   function methodName(row) {
     return row["Name (Child-friendly)"] || row["Name (Card Title)"] || row["Name (Professional)"] || "";
@@ -318,18 +518,21 @@ function main() {
   /* ─── Render cards ─── */
   function render() {
     const u = UI[lang];
-    const list = filtered();
-    countEl.textContent = u.count(list.length, enriched.length);
+    visibleCards = filtered();
+    countEl.textContent = u.count(visibleCards.length, enriched.length);
     grid.replaceChildren();
-    if (!list.length) {
+    randomBtn.disabled = visibleCards.length === 0;
+    if (!visibleCards.length) {
       emptyEl.hidden = false;
       emptyEl.textContent = u.empty;
+      syncDialogNav();
       return;
     }
     emptyEl.hidden = true;
-    for (const m of list) {
+    for (const m of visibleCards) {
       grid.appendChild(buildCard(m));
     }
+    syncDialogNav();
   }
 
   function buildCard(m) {
@@ -337,6 +540,7 @@ function main() {
     const kid = m.kid;
     const color = kid ? kid.color : (MOD_COLORS[m.modality] || "#eee");
     const nickname = kid ? (lang === "en" ? kid.nickname_en : kid.nickname) : methodName(row);
+    const art = getCardArt(m.id);
 
     let headline = "";
     if (kid && kid.headline_cs) {
@@ -364,20 +568,38 @@ function main() {
     card.className = "card";
     card.tabIndex = 0;
     card.setAttribute("role", "button");
+    if (art) card.dataset.hasArt = "true";
+
+    const artFrame = document.createElement("div");
+    artFrame.className = "card-art-frame";
 
     const colorDiv = document.createElement("div");
     colorDiv.className = "card-color";
     colorDiv.style.backgroundColor = color;
+    artFrame.appendChild(colorDiv);
+
+    if (art) {
+      const img = document.createElement("img");
+      img.className = "card-art";
+      img.src = art.src;
+      img.alt = art.alt[lang] || nickname;
+      img.loading = "lazy";
+      colorDiv.appendChild(img);
+    }
 
     const emoji = document.createElement("span");
     emoji.className = "card-emoji";
     emoji.textContent = MOD_EMOJI[m.modality] || "";
     colorDiv.appendChild(emoji);
 
+    const titlePlate = document.createElement("div");
+    titlePlate.className = "card-title-plate";
+
     const nick = document.createElement("span");
     nick.className = "card-nickname";
     nick.textContent = nickname;
-    colorDiv.appendChild(nick);
+    titlePlate.appendChild(nick);
+    colorDiv.appendChild(titlePlate);
 
     const body = document.createElement("div");
     body.className = "card-body";
@@ -401,11 +623,14 @@ function main() {
     pills.append(pMod, pNrg);
 
     body.append(h2, prev, pills);
-    card.append(colorDiv, body);
+    card.append(artFrame, body);
 
-    card.addEventListener("click", () => openDetail(m));
+    card.addEventListener("click", () => openDetailFromList(visibleCards, visibleCards.indexOf(m), card));
     card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(m); }
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openDetailFromList(visibleCards, visibleCards.indexOf(m), card);
+      }
     });
     return card;
   }
@@ -421,12 +646,46 @@ function main() {
   }
 
   /* ─── Detail dialog ─── */
-  function openDetail(m) {
+  function syncDialogNav() {
+    const hasNav = activeModalCards.length > 1;
+    dlgPrev.hidden = !hasNav;
+    dlgNext.hidden = !hasNav;
+    dlgPrev.disabled = !hasNav;
+    dlgNext.disabled = !hasNav;
+  }
+
+  function openDetailFromList(list, index, triggerEl = null) {
+    if (!Array.isArray(list) || list.length === 0 || index < 0 || index >= list.length) return;
+    detailReturnFocusEl = triggerEl instanceof HTMLElement ? triggerEl : detailReturnFocusEl;
+    activeModalCards = list;
+    activeModalIndex = index;
+    openDetail(activeModalCards[activeModalIndex]);
+  }
+
+  function stepDetail(delta) {
+    if (!dlg.open || activeModalCards.length < 2 || activeModalIndex < 0 || detailTransitionBusy) return;
+    activeModalIndex = (activeModalIndex + delta + activeModalCards.length) % activeModalCards.length;
+    openDetail(activeModalCards[activeModalIndex], delta);
+  }
+
+  function openRandomCard() {
+    if (visibleCards.length === 0) return;
+    const index = Math.floor(Math.random() * visibleCards.length);
+    openDetailFromList(visibleCards, index);
+  }
+
+  function closeDetail() {
+    if (!dlg.open) return;
+    dlg.close();
+  }
+
+  function renderDetailContent(m) {
     const u = UI[lang];
     const row = lang === "en" ? m.en : m.cs;
     const kid = m.kid;
     const color = kid ? kid.color : (MOD_COLORS[m.modality] || "#eee");
     const nickname = kid ? (lang === "en" ? kid.nickname_en : kid.nickname) : methodName(row);
+    const art = getCardArt(m.id);
 
     let headline = "";
     if (kid && kid.headline_cs) {
@@ -447,6 +706,8 @@ function main() {
     }
 
     dlgColor.style.backgroundColor = color;
+    dlgColor.style.setProperty("--detail-art", art ? `url(${art.src})` : "none");
+    dlgColor.dataset.hasArt = art ? "true" : "false";
     dlgNick.textContent = nickname;
     dlgHead.textContent = headline;
 
@@ -479,11 +740,82 @@ function main() {
       dlgMeta.appendChild(pill);
     }
 
-    dlg.showModal();
+    dlgScroll.scrollTop = 0;
   }
 
-  dlgClose.addEventListener("click", () => dlg.close());
-  dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+  function animateDetailSwap(nextMethod, direction) {
+    detailTransitionBusy = true;
+
+    const outgoing = dlgCard.cloneNode(true);
+    outgoing.removeAttribute("id");
+    outgoing.classList.add("dialog-card-ghost", direction > 0 ? "is-leaving-next" : "is-leaving-prev");
+    outgoing.querySelectorAll("[id]").forEach((node) => node.removeAttribute("id"));
+    dlg.appendChild(outgoing);
+
+    renderDetailContent(nextMethod);
+    dlgCard.classList.add(direction > 0 ? "is-entering-next" : "is-entering-prev");
+
+    const clearTransition = () => {
+      outgoing.remove();
+      dlgCard.classList.remove("is-entering-next", "is-entering-prev");
+      detailTransitionBusy = false;
+    };
+
+    const handleEnd = (event) => {
+      if (event.target !== dlgCard) return;
+      dlgCard.removeEventListener("animationend", handleEnd);
+      clearTransition();
+    };
+
+    dlgCard.addEventListener("animationend", handleEnd);
+  }
+
+  function openDetail(m, direction = 0) {
+    const shouldAnimate = dlg.open && direction !== 0;
+    if (shouldAnimate) {
+      animateDetailSwap(m, direction);
+      return;
+    }
+
+    renderDetailContent(m);
+
+    syncDialogNav();
+    if (!dlg.open) {
+      if (!(detailReturnFocusEl instanceof HTMLElement)) {
+        detailReturnFocusEl = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      }
+      lockBackgroundScroll();
+      dlg.showModal();
+      dlgClose.focus({ preventScroll: true });
+    }
+  }
+
+  dlgClose.addEventListener("click", closeDetail);
+  dlg.addEventListener("click", (e) => { if (e.target === dlg) closeDetail(); });
+  dlg.addEventListener("close", () => {
+    detailTransitionBusy = false;
+    dlg.querySelectorAll(".dialog-card-ghost").forEach((node) => node.remove());
+    dlgCard.classList.remove("is-entering-next", "is-entering-prev");
+    unlockBackgroundScroll();
+    detailScrollSnapshot = null;
+    if (detailReturnFocusEl instanceof HTMLElement && document.contains(detailReturnFocusEl)) {
+      detailReturnFocusEl.focus({ preventScroll: true });
+    }
+    detailReturnFocusEl = null;
+  });
+  dlgPrev.addEventListener("click", () => stepDetail(-1));
+  dlgNext.addEventListener("click", () => stepDetail(1));
+  randomBtn.addEventListener("click", openRandomCard);
+  document.addEventListener("keydown", (e) => {
+    if (!dlg.open) return;
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      stepDetail(-1);
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      stepDetail(1);
+    }
+  });
 
   /* ─── Language ─── */
   function setLang(next) {
@@ -501,8 +833,12 @@ function main() {
     if ($("bub-age-label")) $("bub-age-label").textContent = u.accAge;
     if ($("age-all")) $("age-all").textContent = u.optAll;
     $("pro-link").textContent = u.proLink;
+    randomBtn.textContent = u.random;
+    randomBtn.setAttribute("aria-label", u.random);
     $("footer-text").innerHTML = u.footer;
     dlgClose.setAttribute("aria-label", u.close);
+    dlgPrev.setAttribute("aria-label", u.prev);
+    dlgNext.setAttribute("aria-label", u.next);
     renderChips();
     syncChips();
     render();

@@ -3,6 +3,7 @@
     "id": "s04",
     "nickname": "Silná chuť",
     "nickname_en": "Sour Candy",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A single open hand holding a small round candy, with 2–3 tiny radiating curved lines around the candy suggesting intensity. One soft apricot fill on the candy only. Organic brush-pen strokes, rounded forms, calm and inviting.",
     "color": "#f2bfab",
     "related": [
       "S04"
@@ -16,6 +17,7 @@
     "id": "s05",
     "nickname": "Studená voda",
     "nickname_en": "Cold Splash",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two cupped hands with a few droplet shapes above them and small curved lines suggesting coolness. Soft pale blue accent on 2–3 droplets only. Gentle, refreshing, not shocking.",
     "color": "#f2bfab",
     "related": [
       "S05"
@@ -29,6 +31,7 @@
     "id": "b05",
     "nickname": "Motýlí objetí",
     "nickname_en": "Butterfly Hug",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two crossed hands resting gently on opposite shoulders, seen from the front — simplified, no face. Small symmetrical curved lines on each side suggesting gentle tapping motion, like butterfly wings. Soft lavender accent on the wing-like motion lines only. Warm, safe, contained composition.",
     "color": "#ddd5ea",
     "related": [
       "B05"
@@ -42,6 +45,7 @@
     "id": "b10",
     "nickname": "Pevné objetí",
     "nickname_en": "Self-Hug",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simplified faceless figure wrapping their own arms around their shoulders or torso, with a few enclosing curved lines around the body suggesting comfort and containment. One warm apricot accent on the central hug shape only. Gentle, reassuring, self-soothing.",
     "color": "#ddd5ea",
     "related": [
       "B10"
@@ -55,6 +59,7 @@
     "id": "c01",
     "nickname": "Barvy pocitů",
     "nickname_en": "Color My Mood",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A sheet of paper with broad rounded swatches and looping color strokes spreading across it like feelings turning visible. One muted dusty rose accent on a single swatch only. Expressive, safe, creative, not chaotic.",
     "color": "#f5d0d8",
     "related": [
       "C01"
@@ -68,6 +73,7 @@
     "id": "c10",
     "nickname": "Mapa těla",
     "nickname_en": "Body Map",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple body outline drawn on a page, with a few soft rounded shapes inside the chest, belly, and head showing where feelings live in the body. One muted coral or sage accent on one inner shape only. Embodied, gentle, clear.",
     "color": "#f5d0d8",
     "related": [
       "C10"
@@ -81,6 +87,7 @@
     "id": "s01",
     "nickname": "Pět smyslů",
     "nickname_en": "5 Senses",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Five tiny sensory symbols arranged in a calm ring — an eye, hand, ear, nose, and small candy or droplet — connected by tiny dots. One soft sage accent on the center dot only. Balanced, grounding, easy to read.",
     "color": "#c5e6d0",
     "related": [
       "S01"
@@ -94,6 +101,7 @@
     "id": "s07",
     "nickname": "Těžká deka",
     "nickname_en": "Heavy Blanket",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A thick rounded blanket draped over a small abstract resting form or pillow bundle, with soft weighted folds suggesting comforting pressure. One muted lavender accent on the blanket only. Cozy, containing, restful.",
     "color": "#d8cfe6",
     "related": [
       "S07"
@@ -107,6 +115,7 @@
     "id": "s06",
     "nickname": "Můj playlist",
     "nickname_en": "My Playlist",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A pair of headphones around a small music note or rounded player, with 2–3 gentle curved lines suggesting sound and immersion. One soft apricot accent on the note only. Calm, familiar, soothing.",
     "color": "#f5ddc8",
     "related": [
       "S06"
@@ -120,6 +129,7 @@
     "id": "c05",
     "nickname": "DJ nálady",
     "nickname_en": "Mood DJ",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple hand adjusting a large rounded slider or turntable-like knob beside a few floating music notes. One dusty rose accent on the slider arc only. Intentional, empowering, mood-shifting.",
     "color": "#f5ddc8",
     "related": [
       "C05"
@@ -133,6 +143,7 @@
     "id": "k05",
     "nickname": "STOP!",
     "nickname_en": "STOP Sign",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A softly rounded octagon STOP sign with hand-drawn letters, paired with a small open palm beneath it suggesting pause before action. One muted terracotta accent on the sign only. Clear, grounding, protective.",
     "color": "#f0d0d0",
     "related": [
       "K05"
@@ -146,6 +157,7 @@
     "id": "k06",
     "nickname": "Jízda na vlně",
     "nickname_en": "Urge Surfing",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A single soft ocean wave with a tiny calm rider or balanced line at the crest, showing the urge being ridden rather than fought. One soft sage accent on the wave crest only. Steady, patient, non-dramatic.",
     "color": "#f0d0d0",
     "related": [
       "K06"
@@ -159,6 +171,7 @@
     "id": "c02",
     "nickname": "Výplach hlavy",
     "nickname_en": "Brain Dump",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. An open notebook or paper with a few loose, playful scribble lines flowing upward and outward from the page, as if thoughts are being released. Lines organic and free. Soft dusty rose accent on one or two of the floating scribble lines. Feels like relief, not chaos.",
     "color": "#d8e4cd",
     "related": [
       "C02"
@@ -172,6 +185,7 @@
     "id": "c03",
     "nickname": "Tajný dopis",
     "nickname_en": "Secret Letter",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A folded letter with a few flowing handwritten lines and a tiny seal or heart mark, as if something private is being safely expressed. One dusty rose accent on the seal only. Reflective, gentle, contained.",
     "color": "#d8e4cd",
     "related": [
       "C03"
@@ -185,6 +199,7 @@
     "id": "r01",
     "nickname": "Krabička záchrany",
     "nickname_en": "Coping Kit",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small open box or pouch holding three calming items — a candy, a smooth stone, and a tiny note card — arranged neatly inside. One soft sage accent on the box interior only. Prepared, practical, reassuring.",
     "color": "#eee5c8",
     "related": [
       "R01"
@@ -198,6 +213,7 @@
     "id": "b06",
     "nickname": "Vyklepání",
     "nickname_en": "Shake It Out",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple, faceless standing figure with arms slightly out, surrounded by small curved motion lines radiating outward from the body suggesting gentle shaking/vibration. Black linework only — no pastel needed. Energetic but safe, like shaking off rain.",
     "color": "#e8ddd0",
     "related": [
       "B06"
@@ -211,6 +227,7 @@
     "id": "b12",
     "nickname": "Dupání",
     "nickname_en": "Stomping",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two feet planted firmly on the ground with short downward curved lines beneath them suggesting solid impact and grounding. Black ink with organic line weight. Strong, steady, rooted.",
     "color": "#e8ddd0",
     "related": [
       "B12"
@@ -224,6 +241,7 @@
     "id": "b03",
     "nickname": "Pevný stisk",
     "nickname_en": "Squeeze & Release",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two hands squeezing a soft rounded cushion or stress shape, with tiny tension-and-release lines around the fingers. One soft sage accent on the object only. Grounded, tactile, relieving.",
     "color": "#efebd7",
     "related": [
       "B03"
@@ -237,6 +255,7 @@
     "id": "b08",
     "nickname": "Tři pozice",
     "nickname_en": "3 Yoga Poses",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Three tiny simplified yoga pose silhouettes connected by one flowing line — seated butterfly, forward fold, and knees-to-chest — arranged in a calm sequence. One muted lavender accent on the connecting line only. Balanced, gentle, body-aware.",
     "color": "#bdbaed",
     "related": [
       "B08"
@@ -250,6 +269,7 @@
     "id": "b09",
     "nickname": "Pomalý krok",
     "nickname_en": "Slow Steps",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Three soft footprints following a slow curved path, with a tiny breath line above them suggesting mindful pace. One soft sage accent on the middle footprint only. Measured, quiet, grounding.",
     "color": "#c4dcbc",
     "related": [
       "B09"
@@ -263,6 +283,7 @@
     "id": "b11",
     "nickname": "Bzučení",
     "nickname_en": "Humming",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simplified side-profile of a face with closed eyes and slightly parted lips, with small concentric curved lines emanating outward from the mouth/throat area suggesting gentle vibration. Soft lavender on one or two of the sound curves. Serene and self-contained.",
     "color": "#e6d3f3",
     "related": [
       "B11"
@@ -276,6 +297,7 @@
     "id": "s02",
     "nickname": "Vůně bezpečí",
     "nickname_en": "Safe Scent",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small bottle, tea sachet, or flower with a few soft scent swirls rising upward. One pale lavender accent on one scent swirl only. Comforting, familiar, calming.",
     "color": "#c8d2f4",
     "related": [
       "S02"
@@ -289,6 +311,7 @@
     "id": "s03",
     "nickname": "Hmatová kotva",
     "nickname_en": "Touch & Feel",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. An open hand touching a textured pebble or fabric swatch marked with soft dots and ridges. One muted sage accent on the textured object only. Tactile, grounding, present-focused.",
     "color": "#e0b9e9",
     "related": [
       "S03"
@@ -302,6 +325,7 @@
     "id": "s08",
     "nickname": "Hračka do ruky",
     "nickname_en": "Fidget Tool",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. An open hand rolling a small fidget stone or simple spinner-like object between the fingers, with tiny curved motion lines around it. One muted mint accent on the object only. Quiet, portable, regulating.",
     "color": "#cbe7c0",
     "related": [
       "S08"
@@ -315,6 +339,7 @@
     "id": "c04",
     "nickname": "Kreslení vzorů",
     "nickname_en": "Pattern Draw",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A pen drawing repeating rounded patterns or mandala-like loops on a small page. One dusty rose accent on a single pattern ring only. Focused, repetitive, soothing.",
     "color": "#d8e5b3",
     "related": [
       "C04"
@@ -328,6 +353,7 @@
     "id": "c06",
     "nickname": "Trhání papíru",
     "nickname_en": "Rip & Tear",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two hands pulling apart a sheet of paper with a few small pieces floating outward. Lines are dynamic but still rounded and organic — conveys healthy release, not aggression. Black ink only, no pastel. Movement feels satisfying, not violent.",
     "color": "#cedeee",
     "related": [
       "C06"
@@ -341,6 +367,7 @@
     "id": "c07",
     "nickname": "Hlasovka",
     "nickname_en": "Voice Memo",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small phone or voice recorder with a gentle waveform rising from it in soft curves. One muted lavender accent on the waveform only. Honest, supportive, quietly expressive.",
     "color": "#dccaf2",
     "related": [
       "C07"
@@ -354,6 +381,7 @@
     "id": "c08",
     "nickname": "Můj text / Rap",
     "nickname_en": "My Rap / Lyrics",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A notebook page or phone screen with short rhythmic lyric lines and a tiny microphone or music note beside it. One warm apricot accent on the note only. Creative, expressive, rhythmic.",
     "color": "#efd2de",
     "related": [
       "C08"
@@ -367,6 +395,7 @@
     "id": "c09",
     "nickname": "Modelování",
     "nickname_en": "Clay Play",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two hands shaping a soft lump of clay into a rounded form, with visible thumb marks and gentle pressure. One earthy sage accent on the clay only. Physical, creative, releasing.",
     "color": "#b2afe9",
     "related": [
       "C09"
@@ -380,6 +409,7 @@
     "id": "k01",
     "nickname": "Jen myšlenka",
     "nickname_en": "Just a Thought",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A fluffy thought cloud floating slightly apart from a small grounded line or pebble below it, with tiny dots between them to suggest distance from the thought. One pale blue-gray accent on the cloud only. Light, spacious, defused.",
     "color": "#cdeee2",
     "related": [
       "K01"
@@ -393,6 +423,7 @@
     "id": "k02",
     "nickname": "Bezpečné místo",
     "nickname_en": "Safe Place",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A soft, cocoon-like rounded enclosure like a nest or gentle cave shape with a tiny abstract figure curled peacefully inside. One warm apricot fill on the enclosure walls. Conveys protection, warmth, chosen solitude not isolation.",
     "color": "#f5cce5",
     "related": [
       "K02"
@@ -406,6 +437,7 @@
     "id": "k03",
     "nickname": "Okénko starostí",
     "nickname_en": "Worry Window",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small rounded window frame with a folded note resting just outside it, as if a worry has been gently set aside for later. One soft sage accent on the note only. Orderly, contained, calming.",
     "color": "#eddcb6",
     "related": [
       "K03"
@@ -419,6 +451,7 @@
     "id": "k04",
     "nickname": "Nejlepší kamarád",
     "nickname_en": "Best Friend",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two rounded speech bubbles facing each other, connected by a soft curve, with a tiny heart in one bubble suggesting kind self-talk. One dusty rose accent on the heart only. Supportive, friendly, compassionate.",
     "color": "#f2d8d4",
     "related": [
       "K04"
@@ -432,6 +465,7 @@
     "id": "k07",
     "nickname": "Těžké počty",
     "nickname_en": "Brain Math",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A few large hand-drawn numbers arranged in a descending arc with tiny dots or arrows guiding the sequence downward. One pale blue accent on a single number only. Focused, structured, brain-engaging.",
     "color": "#b7d0e6",
     "related": [
       "K07"
@@ -445,6 +479,7 @@
     "id": "k08",
     "nickname": "Pro a proti",
     "nickname_en": "Pros & Cons",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple two-column note card or small balance scale with two rounded shapes held evenly, showing weighing options before acting. One soft sage accent on one side only. Thoughtful, balanced, steady.",
     "color": "#e3aeef",
     "related": [
       "K08"
@@ -458,6 +493,7 @@
     "id": "sa03",
     "nickname": "Dopis do budoucna",
     "nickname_en": "Future Letter",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A letter or note with a tiny arrow and star trail moving gently forward, suggesting a message sent toward the future. One warm apricot accent on the star trail only. Hopeful, reflective, tender.",
     "color": "#dae7c6",
     "related": [
       "SA03"
@@ -471,6 +507,7 @@
     "id": "sa04",
     "nickname": "Tři radosti",
     "nickname_en": "3 Good Things",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Three small sparkling stars or treasured objects arranged neatly above a short notebook line, like three good moments being counted. One soft golden-apricot accent on one star only. Warm, grateful, uplifting.",
     "color": "#e4e1c9",
     "related": [
       "SA04"
@@ -484,6 +521,7 @@
     "id": "sa05",
     "nickname": "Vnitřní kouč",
     "nickname_en": "Inner Coach",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small abstract figure with a larger gentle speech bubble or guiding shape behind it, like a caring inner voice standing close. One soft lavender accent on the supportive bubble only. Kind, encouraging, safe.",
     "color": "#cfc1e2",
     "related": [
       "SA05"
@@ -497,6 +535,7 @@
     "id": "sa06",
     "nickname": "Napsat o pomoc",
     "nickname_en": "Text for Help",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A phone screen with a rounded chat bubble and a tiny heart or lifeline curve inside it. One soft sage accent on the chat bubble only. Direct, brave, supportive.",
     "color": "#eccfeb",
     "related": [
       "SA06"
@@ -510,6 +549,7 @@
     "id": "n01",
     "nickname": "Bosé nohy",
     "nickname_en": "Bare Feet",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two bare footprints standing on a patch of grass or earth suggested by a few curved ground lines and blades. One muted green accent on the grass only. Rooted, earthy, grounding.",
     "color": "#e5e6b2",
     "related": [
       "N01"
@@ -523,6 +563,7 @@
     "id": "n02",
     "nickname": "Lov pokladů",
     "nickname_en": "Nature Hunt",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small magnifying glass hovering over a leaf, pebble, and sprout arranged like found treasures. One soft sage accent on the leaf only. Curious, attentive, outdoorsy.",
     "color": "#ecd9b6",
     "related": [
       "N02"
@@ -536,6 +577,7 @@
     "id": "n03",
     "nickname": "Pozorování mraků",
     "nickname_en": "Cloud Watch",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two or three soft, rounded cloud shapes with a single upward-gazing eye or a simple upturned face beneath them (abstract, no detailed features). One soft sage accent on the largest cloud. Peaceful, expansive, contemplative.",
     "color": "#e5c8df",
     "related": [
       "N03"
@@ -549,6 +591,7 @@
     "id": "h01",
     "nickname": "Legrační hlas",
     "nickname_en": "Silly Voice",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A speech bubble filled with playful wavy letters or squiggles and a tiny starburst, suggesting a goofy cartoon voice. One warm apricot accent on the starburst only. Silly, light, disarming.",
     "color": "#cae8e2",
     "related": [
       "H01"
@@ -562,6 +605,7 @@
     "id": "h02",
     "nickname": "Vtipné video",
     "nickname_en": "Funny Video",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small phone screen with a rounded play button and two tiny joyful sparkles around it suggesting a funny clip. One pale apricot accent on the play button only. Light, comforting, easy.",
     "color": "#e1e3ca",
     "related": [
       "H02"
@@ -575,6 +619,7 @@
     "id": "r02",
     "nickname": "Večerní klid",
     "nickname_en": "Bedtime Routine",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A crescent moon above a tidy little sequence of bedtime objects — pillow, notebook, and toothbrush — arranged in a calm stack. One soft lavender accent on the moon only. Predictable, restful, soothing.",
     "color": "#e4d7ef",
     "related": [
       "R02"
@@ -588,6 +633,7 @@
     "id": "r03",
     "nickname": "Ranní start",
     "nickname_en": "Morning Check",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple sun rising over a small checklist card with three short tick marks, like a gentle morning self-check. One warm apricot accent on the sun only. Fresh, supportive, organized.",
     "color": "#ebd9ad",
     "related": [
       "R03"
@@ -601,6 +647,7 @@
     "id": "b13",
     "nickname": "Lehký úsměv",
     "nickname_en": "Half-Smile",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A very simple mouth with a subtle half-smile curve, paired with two relaxed open-hand lines beneath it suggesting softening and release. Black ink with gentle line weight. Calm, tiny, effective.",
     "color": "#c5c5f2",
     "related": [
       "B13"
@@ -614,6 +661,7 @@
     "id": "s09",
     "nickname": "Bystré ucho",
     "nickname_en": "Mindful Ear",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A single ear shape with two or three concentric listening lines and a tiny distant dot to listen for. One soft sage accent on one sound curve only. Focused, attentive, quiet.",
     "color": "#abede2",
     "related": [
       "S09"
@@ -627,6 +675,7 @@
     "id": "s10",
     "nickname": "Hřejivý hrnek",
     "nickname_en": "Warm Mug",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two hands wrapped around a steaming mug, with soft upward curls of steam and a rounded cup shape. One warm apricot accent on the mug or one steam curl only. Cozy, comforting, safe.",
     "color": "#d7edc4",
     "related": [
       "S10"
@@ -640,6 +689,7 @@
     "id": "s11",
     "nickname": "Obkreslování okem",
     "nickname_en": "Eye Tracing",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. An outlined hand with one finger tracing up and down its silhouette along a single flowing path. One soft sage accent on the tracing line only. Simple, discreet, regulating.",
     "color": "#c3c0de",
     "related": [
       "S11"
@@ -653,6 +703,7 @@
     "id": "c11",
     "nickname": "Čmárání pocitů",
     "nickname_en": "Emotion Scribble",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A dense rounded scribble cloud on paper gradually loosening into smoother lines at one edge, showing emotion moving through the page. One dusty rose accent on the calmer edge only. Releasing, active, safe.",
     "color": "#e4b9cf",
     "related": [
       "C11"
@@ -666,6 +717,7 @@
     "id": "c12",
     "nickname": "Skládání papíru",
     "nickname_en": "Paper Folding",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A square sheet mid-fold with softened but clear creases forming a simple origami corner. One pale blue accent on one folded flap only. Precise, focused, orderly.",
     "color": "#d0cdf4",
     "related": [
       "C12"
@@ -679,6 +731,7 @@
     "id": "c13",
     "nickname": "Vytloukání rytmu",
     "nickname_en": "Drumming",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two hands tapping a tabletop or knees with small repeating rhythm lines underneath. One warm apricot accent on a single beat mark only. Rhythmic, grounding, energizing.",
     "color": "#edbfbf",
     "related": [
       "C13"
@@ -692,6 +745,7 @@
     "id": "k09",
     "nickname": "Zkrátka to tak je",
     "nickname_en": "It Is What It Is",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A smooth rounded stone resting calmly on the ground with a small breath line above it, suggesting acceptance and letting the struggle settle. One soft sage accent on the stone only. Quiet, steady, grounded.",
     "color": "#f3bee7",
     "related": [
       "K09"
@@ -705,6 +759,7 @@
     "id": "n04",
     "nickname": "Vzory v přírodě",
     "nickname_en": "Find Patterns",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A leaf or bark fragment filled with repeating stripes, dots, and natural fractal-like lines, with a tiny magnifying curve nearby. One soft sage accent on one pattern band only. Observant, calming, nature-focused.",
     "color": "#b0e2e8",
     "related": [
       "N04"
@@ -718,6 +773,7 @@
     "id": "n05",
     "nickname": "Moje místo venku",
     "nickname_en": "My Nature Spot",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A tiny chosen place in nature made of a sprout, smooth stone, and curved sheltering branch, arranged like a personal outdoor nook. One muted green accent on the sprout only. Settled, safe, restorative.",
     "color": "#cbe5c2",
     "related": [
       "N05"
@@ -731,6 +787,7 @@
     "id": "h03",
     "nickname": "Krabice smíchu",
     "nickname_en": "Laugh Box",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A small box opening to release tiny stars, squiggles, and playful shapes upward like stored-up laughter. One warm apricot accent on one floating shape only. Cheerful, surprising, light.",
     "color": "#b6b9e2",
     "related": [
       "H03"
@@ -744,6 +801,7 @@
     "id": "h04",
     "nickname": "Směšný filtr",
     "nickname_en": "Silly Filter",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple phone screen with oversized playful filter shapes floating above it — funny glasses, rabbit ears, or a clown nose drawn as separate rounded icons, not on a face. One soft apricot accent on one filter shape only. Playful, absurd, disarming.",
     "color": "#c2ebbc",
     "related": [
       "H04"
@@ -757,6 +815,7 @@
     "id": "h05",
     "nickname": "Přitažené za vlasy",
     "nickname_en": "Way Too Far",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A tiny worry cloud stretching into an obviously absurd oversized shape like a rocket or planet with a few playful stars around it, showing the thought being exaggerated past belief. One muted coral accent on the absurd far-away shape only. Silly, spacious, not scary.",
     "color": "#e7bcd5",
     "related": [
       "H05"
@@ -770,6 +829,7 @@
     "id": "h06",
     "nickname": "Smějící se dech",
     "nickname_en": "Laughing Breath",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple laughing mouth arc with long curved exhale lines flowing outward like ribbons, suggesting breath turning into laughter. One warm apricot accent on one exhale curve only. Releasing, playful, airy.",
     "color": "#d8d3e8",
     "related": [
       "H06"
@@ -783,6 +843,7 @@
     "id": "r04",
     "nickname": "Tři kroky",
     "nickname_en": "3-Step Switch",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Three small ritual icons connected in order by a dotted line — a droplet for wash, a breath swirl, and a backpack or touch point. One soft sage accent on the middle breath swirl only. Clear, orderly, reassuring.",
     "color": "#ede1ce",
     "related": [
       "R04"
@@ -796,6 +857,7 @@
     "id": "b01",
     "nickname": "Dýchání do čtverce",
     "nickname_en": "Box Breath",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A softly rounded square shape made of a single flowing line, with a small gentle spiral or breeze-like curve inside suggesting breath. Black ink with varying stroke weight. Optional: one dusty sage accent on the spiral. Minimal, meditative, grounding.",
     "color": "#f2bfab",
     "related": [
       "B01"
@@ -809,6 +871,7 @@
     "id": "b02",
     "nickname": "Hluboký dech",
     "nickname_en": "Belly Breath",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two hands resting on a rounded belly shape like a soft balloon gently expanding and settling with breath, with one inhale curve and one exhale curve nearby. One dusty sage accent on the belly shape only. Calm, body-aware, grounding.",
     "color": "#ddd5ea",
     "related": [
       "B02"
@@ -822,6 +885,7 @@
     "id": "b04",
     "nickname": "Rychlé vybití",
     "nickname_en": "Power Sprint",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. A simple faceless figure in mid-run with two or three curved speed lines behind it, showing a quick burst of safe energy release. Black ink with rounded motion. Powerful, active, not aggressive.",
     "color": "#cce8e8",
     "related": [
       "B04"
@@ -835,6 +899,7 @@
     "id": "b07",
     "nickname": "Odtlačení zdi",
     "nickname_en": "Wall Push",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two open hands pressing firmly against a vertical wall line, with short outward force lines from the palms. One muted sage accent on the wall edge only. Strong, steady, contained.",
     "color": "#f5d0d8",
     "related": [
       "B07"
@@ -848,6 +913,7 @@
     "id": "sa01",
     "nickname": "Pokec s plyšákem",
     "nickname_en": "Talk to Toy",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. An open hand holding a small teddy bear or plush toy, with a gentle speech bubble between them suggesting safe practice talking. One warm apricot accent on the speech bubble only. Soft, comforting, companionable.",
     "color": "#c5e6d0",
     "related": [
       "SA01"
@@ -861,6 +927,7 @@
     "id": "sa02",
     "nickname": "Zkouška nanečisto",
     "nickname_en": "Practice Talk",
+    "image_prompt_en": "Hand-drawn line art icon, transparent background. Two rounded speech bubbles facing each other, one slightly larger like a rehearsal echo, connected by a calm curved line. One soft sage accent on the leading bubble only. Brave, practiced, reassuring.",
     "color": "#d8cfe6",
     "related": [
       "SA02"
