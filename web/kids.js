@@ -262,7 +262,7 @@ function main() {
     return btn;
   }
 
-  /** Keep tray collapsed when not hovered; move the active chip above the tray so it stays visible. */
+  /** Sync aria-pressed on all chips; CSS handles visibility via .bubble.pinned state. */
   function repositionFilterChips(bubble, tray, keys, selectedKey) {
     keys.forEach((k) => {
       let btn = tray.querySelector(`button[data-filter-key="${k}"]`);
@@ -273,10 +273,6 @@ function main() {
       const btn = tray.querySelector(`button[data-filter-key="${k}"]`);
       if (btn) btn.setAttribute("aria-pressed", selectedKey === k ? "true" : "false");
     });
-    if (selectedKey) {
-      const selBtn = tray.querySelector(`button[data-filter-key="${selectedKey}"]`);
-      if (selBtn) bubble.insertBefore(selBtn, tray);
-    }
   }
 
   function syncChips() {
