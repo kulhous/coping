@@ -195,7 +195,7 @@ function main() {
   let lang = localStorage.getItem(LANG_KEY) || "cs";
 
   // Active filters
-  const sel = { modality: null, state: null, energy: null, age: null };
+  const sel = { modality: new Set(), state: new Set(), energy: new Set(), age: null };
 
   function methodName(row) {
     return row["Name (Child-friendly)"] || row["Name (Card Title)"] || row["Name (Professional)"] || "";
@@ -253,9 +253,13 @@ function main() {
     btn.className = "chip";
     btn.dataset.filterKey = value;
     btn.textContent = label;
-    btn.setAttribute("aria-pressed", sel[dimension] === value ? "true" : "false");
+    btn.setAttribute("aria-pressed", sel[dimension].has(value) ? "true" : "false");
     btn.addEventListener("click", () => {
-      sel[dimension] = sel[dimension] === value ? null : value;
+      if (sel[dimension].has(value)) {
+        sel[dimension].delete(value);
+      } else {
+        sel[dimension].add(value);
+      }
       syncChips();
       render();
     });
@@ -263,7 +267,7 @@ function main() {
   }
 
   /** Sync aria-pressed on all chips; CSS handles visibility via .bubble.pinned state. */
-  function repositionFilterChips(bubble, tray, keys, selectedKey) {
+  function repositionFilterChips(bubble, tray, keys, selectedKeys) {
     keys.forEach((k) => {
       let btn = tray.querySelector(`button[data-filter-key="${k}"]`);
       if (!btn) btn = bubble.querySelector(`:scope > button.chip[data-filter-key="${k}"]`);
@@ -271,7 +275,7 @@ function main() {
     });
     keys.forEach((k) => {
       const btn = tray.querySelector(`button[data-filter-key="${k}"]`);
-      if (btn) btn.setAttribute("aria-pressed", selectedKey === k ? "true" : "false");
+      if (btn) btn.setAttribute("aria-pressed", selectedKeys.has(k) ? "true" : "false");
     });
   }
 
@@ -285,17 +289,17 @@ function main() {
         b.setAttribute("aria-pressed", (v === "" && sel.age === null) || (v === sel.age) ? "true" : "false");
       });
     }
-    bubMod.classList.toggle("pinned", sel.modality !== null);
-    bubState.classList.toggle("pinned", sel.state !== null);
-    bubEnergy.classList.toggle("pinned", sel.energy !== null);
+    bubMod.classList.toggle("pinned", sel.modality.size > 0);
+    bubState.classList.toggle("pinned", sel.state.size > 0);
+    bubEnergy.classList.toggle("pinned", sel.energy.size > 0);
   }
 
   /* ─── Filter ─── */
   function filtered() {
     return enriched.filter((m) => {
-      if (sel.modality && m.modality !== sel.modality) return false;
-      if (sel.state && !m.stateKeys.includes(sel.state)) return false;
-      if (sel.energy && m.energyKey !== sel.energy) return false;
+      if (sel.modality.size > 0 && !sel.modality.has(m.modality)) return false;
+      if (sel.state.size > 0 && !m.stateKeys.some((key) => sel.state.has(key))) return false;
+      if (sel.energy.size > 0 && !sel.energy.has(m.energyKey)) return false;
       if (sel.age) {
         const row = lang === "en" ? m.en : m.cs;
         const rangeText = row["Age Range"] || "";
@@ -353,7 +357,7 @@ function main() {
     }
 
     const preview = kid
-      ? firstLines(lang === "en" ? kid.body_en : kid.body_cs, 2)
+      ? firstLines(cleanKidBodyText(lang === "en" ? kid.body_en : kid.body_cs), 2)
       : (row["Brief Mechanism"] || "");
 
     const card = document.createElement("article");
@@ -406,6 +410,12 @@ function main() {
     return card;
   }
 
+  function cleanKidBodyText(text) {
+    return (text || "")
+      .replace(/^\*\*[^*]+\*\*\n+/, "")
+      .trim();
+  }
+
   function firstLines(text, n) {
     return (text || "").split(/(?<=[\.\?\!])\s+/).slice(0, n).join(" ");
   }
@@ -441,8 +451,7 @@ function main() {
     dlgHead.textContent = headline;
 
     if (kid) {
-      let text = lang === "en" ? (kid.body_en || "") : (kid.body_cs || "");
-      text = text.replace(/^\*\*[^*]+\*\*\n+/, "");
+      const text = cleanKidBodyText(lang === "en" ? kid.body_en : kid.body_cs);
       dlgText.innerHTML = parseMd(text);
     } else {
       const parts = [];

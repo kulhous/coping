@@ -253,7 +253,7 @@ body {
 
 /* Pinned + not hovered: keep tray open just enough to show the selected chip */
 .bubble.pinned:not(:hover) .bubble-tray {
-  max-height: 60px;
+  max-height: 400px;
   opacity: 1;
   visibility: visible;
   margin-top: 0.5rem;
