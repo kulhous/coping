@@ -77,3 +77,15 @@
 ### Humming (vagal toning — sound)
 
 > Hand-drawn line art icon, transparent background. A simplified side-profile of a face with closed eyes and slightly parted lips, with small concentric curved lines emanating outward from the mouth/throat area suggesting gentle vibration. Soft lavender on one or two of the sound curves. Serene and self-contained.
+
+---
+
+## Special Cards (not counted in the 67 coping skills)
+
+### First Aid (wound care — disinfection & seeking help)
+
+> Hand-drawn line art icon, transparent background. A gentle, rounded first-aid cross (with softly curved edges, not sharp) centered inside a soft circle. Below the cross, a small open hand reaches upward toward it, palm up — suggesting asking for help. One muted warm apricot accent on the cross only. No wounds, no blood, no distress. Conveys safety, readiness, and the courage to seek care. Organic brush-pen strokes, calm and reassuring.
+
+### Healing My Skin (scar & wound aftercare — self-compassion)
+
+> Hand-drawn line art icon, transparent background. A forearm shown in soft, simple outline with a small adhesive strip (steri-strip / butterfly closure) drawn as a gentle rounded shape on the skin — abstract and non-graphic, like a tiny bandage or plaster. A single small leaf or sprout grows upward from beside the strip, suggesting healing and renewal. One soft dusty sage accent on the leaf. No redness, no marks, no open wounds — the focus is entirely on care and regrowth. Warm, gentle, empowering.

@@ -26,6 +26,11 @@
       </div>
     </header>
 
+    <!-- ===== Special cards (first aid, wound aftercare) ===== -->
+    <section class="special-section" id="special-section" hidden>
+      <div class="special-cards" id="special-card"></div>
+    </section>
+
     <!-- ===== Filter bubbles ===== -->
     <section class="age-bar" id="age-filter">
       <span class="age-label" id="bub-age-label">🎂 Kolik mi je?</span>
@@ -75,18 +80,22 @@
     <dialog id="detail" aria-labelledby="detail-nickname">
       <button type="button" class="dialog-nav dialog-nav-prev" id="detail-prev" aria-label="Předchozí kartička">‹</button>
       <button type="button" class="dialog-nav dialog-nav-next" id="detail-next" aria-label="Další kartička">›</button>
-      <div class="dialog-card" id="detail-card">
-        <div class="dialog-top-bar">
-          <h2 class="dialog-nickname" id="detail-nickname"></h2>
-          <button type="button" class="btn-close-icon" id="detail-close" aria-label="Zavřít">✕</button>
-        </div>
-        <div class="dialog-color" id="detail-color">
-          <div class="dialog-meta" id="detail-meta"></div>
-        </div>
-        <div class="dialog-scroll" id="detail-scroll">
-          <div class="dialog-body">
-            <h3 id="detail-headline"></h3>
-            <div class="dialog-text" id="detail-text"></div>
+      <div class="dialog-scale-shell" id="detail-scale-shell">
+        <div class="dialog-card" id="detail-card">
+          <div class="dialog-top-bar">
+            <h2 class="dialog-nickname" id="detail-nickname"></h2>
+            <div class="dialog-top-actions">
+              <button type="button" class="btn-close-icon" id="detail-close" aria-label="Zavřít">✕</button>
+            </div>
+          </div>
+          <div class="dialog-color" id="detail-color">
+            <div class="dialog-meta" id="detail-meta"></div>
+          </div>
+          <div class="dialog-scroll" id="detail-scroll">
+            <div class="dialog-body">
+              <h3 id="detail-headline"></h3>
+              <div class="dialog-text" id="detail-text"></div>
+            </div>
           </div>
         </div>
       </div>

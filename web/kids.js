@@ -1,6 +1,10 @@
 import { parseMd } from "./parse_md.js";
 
 const LANG_KEY = "coping-methods-lang";
+const DETAIL_DEFAULT_RENDER_MODE = "scaled";
+const DETAIL_CARD_RATIO = 0.68;
+const DETAIL_DESIGN_WIDTH = 470;
+const DETAIL_DESIGN_HEIGHT = Math.round(DETAIL_DESIGN_WIDTH / DETAIL_CARD_RATIO);
 
 /* ─── Kid-friendly modality labels ─── */
 const MOD_MAP = {
@@ -305,6 +309,7 @@ function main() {
   const bubState  = $("bub-state");
   const bubEnergy = $("bub-energy");
   const dlg       = $("detail");
+  const dlgScaleShell = $("detail-scale-shell");
   const dlgCard   = $("detail-card");
   const dlgColor  = $("detail-color");
   const dlgNick   = $("detail-nickname");
@@ -318,7 +323,9 @@ function main() {
   const btnCs     = $("lang-cs");
   const btnEn     = $("lang-en");
   const randomBtn = $("random-card");
-  const rootEl    = document.documentElement;
+  const specialSection = $("special-section");
+  const specialCardEl = $("special-card");
+  const rootEl = document.documentElement;
   const bodyEl    = document.body;
   const chipsMod  = $("chips-modality");
   const chipsState= $("chips-state");
@@ -330,6 +337,7 @@ function main() {
   let methods = [];       // from methods_bilingual.json
   let kidsCards = [];     // from kids_cards.json
   let kidsMap = {};       // method_id -> kids card
+  let specialCards = []; // special cards (special: true)
   let enriched = [];      // methods with computed fields
   let visibleCards = [];
   let activeModalCards = [];
@@ -339,6 +347,7 @@ function main() {
   let detailScrollSnapshot = null;
   let detailScrollLockStyles = null;
   let lang = localStorage.getItem(LANG_KEY) || "cs";
+  let detailRenderMode = DETAIL_DEFAULT_RENDER_MODE;
 
   // Active filters
   const sel = { modality: new Set(), state: new Set(), energy: new Set(), age: null };
@@ -399,6 +408,36 @@ function main() {
 
   function methodName(row) {
     return row["Name (Child-friendly)"] || row["Name (Card Title)"] || row["Name (Professional)"] || "";
+  }
+
+  function isScaledDetailMode() {
+    return detailRenderMode === "scaled";
+  }
+
+  function updateDetailRenderMetrics() {
+    if (!isScaledDetailMode()) {
+      dlg.style.removeProperty("--detail-scale");
+      dlg.style.removeProperty("--detail-scaled-height");
+      return;
+    }
+
+    const availableWidth = dlg.clientWidth;
+    if (!availableWidth) return;
+
+    const scale = Math.min(1, availableWidth / DETAIL_DESIGN_WIDTH);
+    dlg.style.setProperty("--detail-scale", scale.toFixed(4));
+    dlg.style.setProperty("--detail-scaled-height", `${(DETAIL_DESIGN_HEIGHT * scale).toFixed(2)}px`);
+  }
+
+  function scheduleDetailRenderMetrics() {
+    requestAnimationFrame(() => {
+      updateDetailRenderMetrics();
+      requestAnimationFrame(() => updateDetailRenderMetrics());
+    });
+  }
+
+  function syncRenderMode() {
+    dlg.dataset.renderMode = detailRenderMode;
   }
 
   /* ─── Build enriched list ─── */
@@ -770,10 +809,44 @@ function main() {
     dlgCard.addEventListener("animationend", handleEnd);
   }
 
+  function animateScaledDetailSwap(nextMethod, direction) {
+    detailTransitionBusy = true;
+    clearHoverTilt();
+
+    const outgoing = dlgScaleShell.cloneNode(true);
+    outgoing.removeAttribute("id");
+    outgoing.classList.remove("is-entering-next", "is-entering-prev");
+    outgoing.classList.add("dialog-shell-ghost", direction > 0 ? "is-leaving-next" : "is-leaving-prev");
+    outgoing.querySelectorAll("[id]").forEach((node) => node.removeAttribute("id"));
+    dlg.appendChild(outgoing);
+
+    renderDetailContent(nextMethod);
+    scheduleDetailRenderMetrics();
+    dlgScaleShell.classList.add(direction > 0 ? "is-entering-next" : "is-entering-prev");
+
+    const clearTransition = () => {
+      outgoing.remove();
+      dlgScaleShell.classList.remove("is-entering-next", "is-entering-prev");
+      detailTransitionBusy = false;
+    };
+
+    const handleEnd = (event) => {
+      if (event.target !== dlgScaleShell) return;
+      dlgScaleShell.removeEventListener("animationend", handleEnd);
+      clearTransition();
+    };
+
+    dlgScaleShell.addEventListener("animationend", handleEnd);
+  }
+
   function openDetail(m, direction = 0) {
     const shouldAnimate = dlg.open && direction !== 0;
     if (shouldAnimate) {
-      animateDetailSwap(m, direction);
+      if (isScaledDetailMode()) {
+        animateScaledDetailSwap(m, direction);
+      } else {
+        animateDetailSwap(m, direction);
+      }
       return;
     }
 
@@ -786,7 +859,10 @@ function main() {
       }
       lockBackgroundScroll();
       dlg.showModal();
+      scheduleDetailRenderMetrics();
       dlgClose.focus({ preventScroll: true });
+    } else if (isScaledDetailMode()) {
+      scheduleDetailRenderMetrics();
     }
   }
 
@@ -795,7 +871,10 @@ function main() {
   dlg.addEventListener("close", () => {
     detailTransitionBusy = false;
     dlg.querySelectorAll(".dialog-card-ghost").forEach((node) => node.remove());
+    dlg.querySelectorAll(".dialog-shell-ghost").forEach((node) => node.remove());
     dlgCard.classList.remove("is-entering-next", "is-entering-prev");
+    dlgScaleShell.classList.remove("is-entering-next", "is-entering-prev");
+    clearHoverTilt();
     unlockBackgroundScroll();
     detailScrollSnapshot = null;
     if (detailReturnFocusEl instanceof HTMLElement && document.contains(detailReturnFocusEl)) {
@@ -815,6 +894,40 @@ function main() {
       e.preventDefault();
       stepDetail(1);
     }
+  });
+
+  window.addEventListener("resize", () => {
+    if (dlg.open && isScaledDetailMode()) scheduleDetailRenderMetrics();
+  });
+
+  if (typeof ResizeObserver === "function") {
+    const detailResizeObserver = new ResizeObserver(() => {
+      if (dlg.open && isScaledDetailMode()) updateDetailRenderMetrics();
+    });
+    detailResizeObserver.observe(dlg);
+    detailResizeObserver.observe(dlgScaleShell);
+  }
+
+  /* ─── Hover tilt (mouse-tracking 3D) ─── */
+  const HOVER_TILT_MAX = 3.5; // degrees
+
+  function clearHoverTilt() {
+    dlgScaleShell.style.transform = "";
+  }
+
+  dlg.addEventListener("mousemove", (e) => {
+    if (detailTransitionBusy || !dlg.open) return;
+    const rect = dlgScaleShell.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+    const x = (e.clientX - rect.left) / rect.width;   // 0..1
+    const y = (e.clientY - rect.top) / rect.height;    // 0..1
+    const tiltX = (0.5 - y) * HOVER_TILT_MAX;  // top edge → positive (tilts toward viewer)
+    const tiltY = (x - 0.5) * HOVER_TILT_MAX;  // right edge → positive (tilts toward viewer)
+    dlgScaleShell.style.transform = `rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg)`;
+  });
+
+  dlg.addEventListener("mouseleave", () => {
+    if (!detailTransitionBusy) clearHoverTilt();
   });
 
   /* ─── Language ─── */
@@ -839,9 +952,72 @@ function main() {
     dlgClose.setAttribute("aria-label", u.close);
     dlgPrev.setAttribute("aria-label", u.prev);
     dlgNext.setAttribute("aria-label", u.next);
+    syncRenderMode();
     renderChips();
     syncChips();
     render();
+    renderSpecialCard();
+  }
+
+  /* ─── Special cards (wound care, scar aftercare) ─── */
+  const SPECIAL_EMOJI = { first_aid: '✚', healing_skin: '🌱' };
+
+  function renderSpecialCard() {
+    if (!specialCards.length) { specialSection.hidden = true; return; }
+    specialSection.hidden = false;
+    specialCardEl.innerHTML = '';
+    for (const sc of specialCards) {
+      const btn = document.createElement('div');
+      btn.className = 'special-card-item';
+      btn.tabIndex = 0;
+      btn.setAttribute('role', 'button');
+      btn.dataset.specialId = sc.id;
+      const emoji = document.createElement('span');
+      emoji.className = 'special-card-emoji';
+      emoji.textContent = SPECIAL_EMOJI[sc.id] || '🩹';
+      const nickEl = document.createElement('span');
+      nickEl.className = 'special-card-nick';
+      nickEl.textContent = lang === 'en' ? sc.nickname_en : sc.nickname;
+      const headEl = document.createElement('span');
+      headEl.className = 'special-card-headline';
+      headEl.textContent = lang === 'en' ? sc.headline_en : sc.headline_cs;
+      const arrow = document.createElement('span');
+      arrow.className = 'special-card-arrow';
+      arrow.textContent = '›';
+      btn.append(emoji, nickEl, headEl, arrow);
+      btn.addEventListener('click', () => openSpecialDetail(sc));
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openSpecialDetail(sc); }
+      });
+      specialCardEl.append(btn);
+    }
+  }
+
+  function openSpecialDetail(card) {
+    if (!card) return;
+    const nick = lang === 'en' ? card.nickname_en : card.nickname;
+    const headline = lang === 'en' ? card.headline_en : card.headline_cs;
+    const bodyText = cleanKidBodyText(lang === 'en' ? card.body_en : card.body_cs);
+    dlgColor.style.backgroundColor = card.color;
+    dlgColor.style.setProperty('--detail-art', 'none');
+    dlgColor.dataset.hasArt = 'false';
+    dlgNick.textContent = nick;
+    dlgHead.textContent = headline;
+    dlgText.innerHTML = parseMd(bodyText);
+    dlgMeta.replaceChildren();
+    dlgScroll.scrollTop = 0;
+    activeModalCards = [];
+    activeModalIndex = -1;
+    syncDialogNav();
+    if (!dlg.open) {
+      detailReturnFocusEl = specialCardEl;
+      lockBackgroundScroll();
+      dlg.showModal();
+      scheduleDetailRenderMetrics();
+      dlgClose.focus({ preventScroll: true });
+    } else if (isScaledDetailMode()) {
+      scheduleDetailRenderMetrics();
+    }
   }
 
   btnCs.addEventListener("click", () => setLang("cs"));
@@ -856,7 +1032,9 @@ function main() {
       methods = mData;
       kidsCards = kData;
       kidsMap = {};
+      specialCards = [];
       for (const k of kidsCards) {
+        if (k.special) { specialCards.push(k); continue; }
         for (const rid of k.related || []) {
           if (!kidsMap[rid]) kidsMap[rid] = k;
         }
