@@ -22,9 +22,21 @@
           <button type="button" id="lang-cs" aria-pressed="true">🇨🇿 Čeština</button>
           <button type="button" id="lang-en" aria-pressed="false">🇬🇧 English</button>
         </div>
+        <button type="button" class="review-toggle" id="quiver-review-toggle"></button>
         <a href="index.html" class="pro-link" id="pro-link">📋 Odborný přehled</a>
       </div>
     </header>
+
+    <section class="quiver-review" id="quiver-review-section" hidden>
+      <div class="quiver-review-head">
+        <div>
+          <h2 id="quiver-review-title"></h2>
+          <p id="quiver-review-lead"></p>
+        </div>
+        <p class="quiver-review-status" id="quiver-review-status"></p>
+      </div>
+      <div class="quiver-review-grid" id="quiver-review-grid"></div>
+    </section>
 
     <!-- ===== Special cards (first aid, wound aftercare) ===== -->
     <section class="special-section" id="special-section" hidden>
@@ -78,9 +90,9 @@
 
     <!-- ===== Detail dialog ===== -->
     <dialog id="detail" aria-labelledby="detail-nickname">
-      <button type="button" class="dialog-nav dialog-nav-prev" id="detail-prev" aria-label="Předchozí kartička">‹</button>
-      <button type="button" class="dialog-nav dialog-nav-next" id="detail-next" aria-label="Další kartička">›</button>
       <div class="dialog-scale-shell" id="detail-scale-shell">
+        <button type="button" class="dialog-nav dialog-nav-prev" id="detail-prev" aria-label="Předchozí kartička">‹</button>
+        <button type="button" class="dialog-nav dialog-nav-next" id="detail-next" aria-label="Další kartička">›</button>
         <div class="dialog-card" id="detail-card">
           <div class="dialog-top-bar">
             <h2 class="dialog-nickname" id="detail-nickname"></h2>

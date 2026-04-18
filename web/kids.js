@@ -1,10 +1,44 @@
 import { parseMd } from "./parse_md.js";
 
 const LANG_KEY = "coping-methods-lang";
+const QUIVER_REVIEW_KEY = "coping-quiver-review-visible";
 const DETAIL_DEFAULT_RENDER_MODE = "scaled";
 const DETAIL_CARD_RATIO = 0.68;
 const DETAIL_DESIGN_WIDTH = 470;
 const DETAIL_DESIGN_HEIGHT = Math.round(DETAIL_DESIGN_WIDTH / DETAIL_CARD_RATIO);
+const QUIVER_REVIEW_DIR = "assets/quiver-review";
+const QUIVER_REVIEW_CURATED_SLUGS = new Set([
+  "box_breath","butterfly_hug","shake_it_out","self_hug","color_my_mood","brain_dump",
+  "secret_letter","mood_dj","body_map","stop_sign","urge_surfing","coping_kit",
+  "5_senses","sour_candy","cold_splash","my_playlist","heavy_blanket",
+]);
+
+function slugifyReviewText(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replaceAll("&", "and")
+    .split("")
+    .map((ch) => (/[a-z0-9]/.test(ch) ? ch : "_"))
+    .join("")
+    .replace(/^_+|_+$/g, "")
+    .replace(/_+/g, "_");
+}
+
+function getQuiverReviewSlug(card) {
+  return slugifyReviewText(card.nickname_en || card.nickname || card.id);
+}
+
+function getQuiverReviewStem(card) {
+  return `${card.id}_${getQuiverReviewSlug(card)}`;
+}
+
+function isQuiverReviewCard(card) {
+  return !QUIVER_REVIEW_CURATED_SLUGS.has(getQuiverReviewSlug(card));
+}
+
+function getQuiverReviewSrc(card) {
+  return `${QUIVER_REVIEW_DIR}/${getQuiverReviewStem(card)}.svg`;
+}
 
 /* ─── Kid-friendly modality labels ─── */
 const MOD_MAP = {
@@ -273,6 +307,13 @@ const UI = {
     objects: "🎒",
     where: "📍",
     mechanism: "🔬 Jak to funguje",
+    reviewShow: "🖼️ Zobrazit Quiver SVG",
+    reviewHide: "🖼️ Skrýt Quiver SVG",
+    reviewTitle: "🖼️ Quiver SVG kontrola",
+    reviewLead: "Tady jsou Quiver náhledy pro rychlou kontrolu. Chybějící soubory se ukážou jako nehotové.",
+    reviewOpen: "Otevřít SVG",
+    reviewMissing: "Chybí SVG",
+    reviewStatus: (ready, total, missing, checking) => `Hotovo ${ready}/${total} · chybí ${missing} · kontroluji ${checking}`,
   },
   en: {
     title: "🌈 Coping cards",
@@ -294,6 +335,13 @@ const UI = {
     objects: "🎒",
     where: "📍",
     mechanism: "🔬 How it works",
+    reviewShow: "🖼️ Show Quiver SVGs",
+    reviewHide: "🖼️ Hide Quiver SVGs",
+    reviewTitle: "🖼️ Quiver SVG review",
+    reviewLead: "These are the Quiver previews for review. Missing files are marked as unfinished.",
+    reviewOpen: "Open SVG",
+    reviewMissing: "SVG missing",
+    reviewStatus: (ready, total, missing, checking) => `Ready ${ready}/${total} · missing ${missing} · checking ${checking}`,
   },
 };
 
@@ -323,6 +371,12 @@ function main() {
   const btnCs     = $("lang-cs");
   const btnEn     = $("lang-en");
   const randomBtn = $("random-card");
+  const reviewToggleBtn = $("quiver-review-toggle");
+  const reviewSection = $("quiver-review-section");
+  const reviewTitleEl = $("quiver-review-title");
+  const reviewLeadEl = $("quiver-review-lead");
+  const reviewStatusEl = $("quiver-review-status");
+  const reviewGrid = $("quiver-review-grid");
   const specialSection = $("special-section");
   const specialCardEl = $("special-card");
   const rootEl = document.documentElement;
@@ -338,6 +392,7 @@ function main() {
   let kidsCards = [];     // from kids_cards.json
   let kidsMap = {};       // method_id -> kids card
   let specialCards = []; // special cards (special: true)
+  let quiverReviewCards = [];
   let enriched = [];      // methods with computed fields
   let visibleCards = [];
   let activeModalCards = [];
@@ -348,6 +403,10 @@ function main() {
   let detailScrollLockStyles = null;
   let lang = localStorage.getItem(LANG_KEY) || "cs";
   let detailRenderMode = DETAIL_DEFAULT_RENDER_MODE;
+  let quiverReviewVisible = localStorage.getItem(QUIVER_REVIEW_KEY);
+  quiverReviewVisible = quiverReviewVisible === null ? true : quiverReviewVisible === "true";
+  let quiverReviewStats = { ready: 0, missing: 0, checking: 0 };
+  let quiverReviewRenderToken = 0;
 
   // Active filters
   const sel = { modality: new Set(), state: new Set(), energy: new Set(), age: null };
@@ -454,6 +513,120 @@ function main() {
       if (kid) usedKids.add(kid.id);
       return { id: m.id, en, cs, modality, energyKey, stateKeys, kid };
     });
+  }
+
+  function updateQuiverReviewStatus() {
+    const u = UI[lang];
+    reviewStatusEl.textContent = u.reviewStatus(
+      quiverReviewStats.ready,
+      quiverReviewCards.length,
+      quiverReviewStats.missing,
+      quiverReviewStats.checking,
+    );
+  }
+
+  function syncQuiverReviewVisibility() {
+    const u = UI[lang];
+    const hasCards = quiverReviewCards.length > 0;
+    reviewToggleBtn.hidden = !hasCards;
+    reviewToggleBtn.textContent = quiverReviewVisible ? u.reviewHide : u.reviewShow;
+    reviewSection.hidden = !hasCards || !quiverReviewVisible;
+  }
+
+  function setQuiverReviewVisible(nextVisible) {
+    quiverReviewVisible = nextVisible;
+    localStorage.setItem(QUIVER_REVIEW_KEY, String(quiverReviewVisible));
+    syncQuiverReviewVisibility();
+  }
+
+  function buildQuiverReviewCard(card, renderToken) {
+    const u = UI[lang];
+    const stem = getQuiverReviewStem(card);
+    const src = getQuiverReviewSrc(card);
+    const item = document.createElement("article");
+    item.className = "quiver-review-card";
+    item.dataset.reviewState = "checking";
+
+    const artWrap = document.createElement("div");
+    artWrap.className = "quiver-review-art";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `${lang === "en" ? card.nickname_en : card.nickname} Quiver SVG`;
+    img.loading = "lazy";
+
+    let settled = false;
+    const settle = (state) => {
+      if (settled || renderToken !== quiverReviewRenderToken) return;
+      settled = true;
+      quiverReviewStats.checking -= 1;
+      if (state === "ready") {
+        item.dataset.reviewState = "ready";
+        quiverReviewStats.ready += 1;
+      } else {
+        item.dataset.reviewState = "missing";
+        quiverReviewStats.missing += 1;
+        artWrap.replaceChildren();
+        const placeholder = document.createElement("div");
+        placeholder.className = "quiver-review-placeholder";
+        placeholder.textContent = u.reviewMissing;
+        artWrap.appendChild(placeholder);
+      }
+      updateQuiverReviewStatus();
+    };
+
+    img.addEventListener("load", () => settle("ready"), { once: true });
+    img.addEventListener("error", () => settle("missing"), { once: true });
+    artWrap.appendChild(img);
+
+    const meta = document.createElement("div");
+    meta.className = "quiver-review-meta";
+
+    const id = document.createElement("div");
+    id.className = "quiver-review-id";
+    id.textContent = card.id.toUpperCase();
+
+    const name = document.createElement("div");
+    name.className = "quiver-review-name";
+    name.textContent = lang === "en" ? card.nickname_en : card.nickname;
+
+    const headline = document.createElement("div");
+    headline.className = "quiver-review-headline";
+    headline.textContent = lang === "en" ? card.headline_en : card.headline_cs;
+
+    const link = document.createElement("a");
+    link.className = "quiver-review-link";
+    link.href = src;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = u.reviewOpen;
+
+    meta.append(id, name, headline, link);
+    item.append(artWrap, meta);
+    return item;
+  }
+
+  function renderQuiverReview() {
+    reviewTitleEl.textContent = UI[lang].reviewTitle;
+    reviewLeadEl.textContent = UI[lang].reviewLead;
+    quiverReviewCards = kidsCards.filter(isQuiverReviewCard);
+    reviewGrid.replaceChildren();
+
+    if (!quiverReviewCards.length) {
+      quiverReviewStats = { ready: 0, missing: 0, checking: 0 };
+      updateQuiverReviewStatus();
+      syncQuiverReviewVisibility();
+      return;
+    }
+
+    const renderToken = ++quiverReviewRenderToken;
+    quiverReviewStats = { ready: 0, missing: 0, checking: quiverReviewCards.length };
+    updateQuiverReviewStatus();
+
+    for (const card of quiverReviewCards) {
+      reviewGrid.appendChild(buildQuiverReviewCard(card, renderToken));
+    }
+    syncQuiverReviewVisibility();
   }
 
   /* ─── Render chip buttons ─── */
@@ -957,6 +1130,7 @@ function main() {
     syncChips();
     render();
     renderSpecialCard();
+    renderQuiverReview();
   }
 
   /* ─── Special cards (wound care, scar aftercare) ─── */
@@ -1022,6 +1196,7 @@ function main() {
 
   btnCs.addEventListener("click", () => setLang("cs"));
   btnEn.addEventListener("click", () => setLang("en"));
+  reviewToggleBtn.addEventListener("click", () => setQuiverReviewVisible(!quiverReviewVisible));
 
   /* ─── Load data ─── */
   Promise.all([
