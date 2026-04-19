@@ -7,6 +7,7 @@ const DETAIL_CARD_RATIO = 0.68;
 const DETAIL_DESIGN_WIDTH = 470;
 const DETAIL_DESIGN_HEIGHT = Math.round(DETAIL_DESIGN_WIDTH / DETAIL_CARD_RATIO);
 const QUIVER_REVIEW_DIR = "assets/quiver-review";
+const QUIVER_REVIEW_VERSION = "20260419-2";
 const QUIVER_REVIEW_CURATED_SLUGS = new Set([
   "box_breath","butterfly_hug","shake_it_out","self_hug","color_my_mood","brain_dump",
   "secret_letter","mood_dj","body_map","stop_sign","urge_surfing","coping_kit",
@@ -37,7 +38,33 @@ function isQuiverReviewCard(card) {
 }
 
 function getQuiverReviewSrc(card) {
-  return `${QUIVER_REVIEW_DIR}/${getQuiverReviewStem(card)}.svg`;
+  return `${QUIVER_REVIEW_DIR}/${getQuiverReviewStem(card)}.svg?v=${QUIVER_REVIEW_VERSION}`;
+}
+
+function getQuiverReviewPngSrc(card) {
+  const stem = getQuiverReviewStem(card);
+  return `../generated_icons/api/${stem}/${stem}_hf_master_512.png?v=${QUIVER_REVIEW_VERSION}`;
+}
+
+function getFallbackReviewArt(card) {
+  if (!card || !isQuiverReviewCard(card)) return null;
+  return {
+    src: getQuiverReviewSrc(card),
+    fallbackSrc: getQuiverReviewPngSrc(card),
+    alt: {
+      cs: `${card.nickname || card.nickname_en || card.id} ilustrace`,
+      en: `${card.nickname_en || card.nickname || card.id} illustration`,
+    },
+  };
+}
+
+function attachArtFallback(img, art) {
+  if (!img || !art || !art.fallbackSrc || art.fallbackSrc === art.src) return;
+  img.addEventListener("error", () => {
+    if (img.dataset.fallbackApplied === "true") return;
+    img.dataset.fallbackApplied = "true";
+    img.src = art.fallbackSrc;
+  });
 }
 
 /* ─── Kid-friendly modality labels ─── */
@@ -281,8 +308,8 @@ const CARD_ART = {
   },
 };
 
-function getCardArt(methodId) {
-  return CARD_ART[methodId] || null;
+function getCardArt(methodId, card = null) {
+  return CARD_ART[methodId] || getFallbackReviewArt(card) || null;
 }
 
 /* ─── UI text ─── */
@@ -542,7 +569,8 @@ function main() {
   function buildQuiverReviewCard(card, renderToken) {
     const u = UI[lang];
     const stem = getQuiverReviewStem(card);
-    const src = getQuiverReviewSrc(card);
+    const art = getFallbackReviewArt(card);
+    const src = art ? art.src : getQuiverReviewSrc(card);
     const item = document.createElement("article");
     item.className = "quiver-review-card";
     item.dataset.reviewState = "checking";
@@ -554,6 +582,7 @@ function main() {
     img.src = src;
     img.alt = `${lang === "en" ? card.nickname_en : card.nickname} Quiver SVG`;
     img.loading = "lazy";
+    attachArtFallback(img, art);
 
     let settled = false;
     const settle = (state) => {
@@ -752,7 +781,7 @@ function main() {
     const kid = m.kid;
     const color = kid ? kid.color : (MOD_COLORS[m.modality] || "#eee");
     const nickname = kid ? (lang === "en" ? kid.nickname_en : kid.nickname) : methodName(row);
-    const art = getCardArt(m.id);
+    const art = getCardArt(m.id, kid);
 
     let headline = "";
     if (kid && kid.headline_cs) {
@@ -796,6 +825,7 @@ function main() {
       img.src = art.src;
       img.alt = art.alt[lang] || nickname;
       img.loading = "lazy";
+      attachArtFallback(img, art);
       colorDiv.appendChild(img);
     }
 
@@ -897,7 +927,7 @@ function main() {
     const kid = m.kid;
     const color = kid ? kid.color : (MOD_COLORS[m.modality] || "#eee");
     const nickname = kid ? (lang === "en" ? kid.nickname_en : kid.nickname) : methodName(row);
-    const art = getCardArt(m.id);
+    const art = getCardArt(m.id, kid);
 
     let headline = "";
     if (kid && kid.headline_cs) {
@@ -918,7 +948,7 @@ function main() {
     }
 
     dlgColor.style.backgroundColor = color;
-    dlgColor.style.setProperty("--detail-art", art ? `url(${art.src})` : "none");
+    dlgColor.style.setProperty("--detail-art", art ? `url(${art.fallbackSrc || art.src})` : "none");
     dlgColor.dataset.hasArt = art ? "true" : "false";
     dlgNick.textContent = nickname;
     dlgHead.textContent = headline;
@@ -1172,9 +1202,10 @@ function main() {
     const nick = lang === 'en' ? card.nickname_en : card.nickname;
     const headline = lang === 'en' ? card.headline_en : card.headline_cs;
     const bodyText = cleanKidBodyText(lang === 'en' ? card.body_en : card.body_cs);
+    const art = getFallbackReviewArt(card);
     dlgColor.style.backgroundColor = card.color;
-    dlgColor.style.setProperty('--detail-art', 'none');
-    dlgColor.dataset.hasArt = 'false';
+    dlgColor.style.setProperty('--detail-art', art ? `url(${art.fallbackSrc || art.src})` : 'none');
+    dlgColor.dataset.hasArt = art ? 'true' : 'false';
     dlgNick.textContent = nick;
     dlgHead.textContent = headline;
     dlgText.innerHTML = parseMd(bodyText);

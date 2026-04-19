@@ -1,9 +1,10 @@
 import argparse
 import json
+import os
 import time
 from io import BytesIO
 from pathlib import Path
-from typing import Dict, Iterable, List
+from typing import Dict, Iterable, List, Optional
 from urllib import error, request
 
 from huggingface_hub import InferenceClient
@@ -14,7 +15,8 @@ CARDS_PATH = Path("web/data/kids_cards.json")
 OUTPUT_DIR = Path("generated_icons/api")
 QUIVER_OUTPUT_DIR = Path("generated_icons/quiver")
 HF_MODEL = "black-forest-labs/FLUX.1-schnell"
-QUIVER_MODEL = "arrow-preview"
+QUIVER_MODEL = "arrow-1.1"
+QUIVER_API_KEY_ENV = "QUIVERAI_API_KEY"
 MASTER_SIZE = 512
 THUMB_SIZES = (120, 80)
 QUIVER_RETRIES = 4
@@ -163,8 +165,10 @@ def generate_quiver_svg(card: Dict[str, str], token: str) -> Path:
             break
         except error.HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")
-            if exc.code >= 500 and attempt < QUIVER_RETRIES:
-                delay = 2 ** (attempt - 1)
+            should_retry = exc.code == 429 or exc.code >= 500
+            if should_retry and attempt < QUIVER_RETRIES:
+                retry_after = exc.headers.get("Retry-After")
+                delay = int(retry_after) if retry_after and retry_after.isdigit() else 2 ** (attempt - 1)
                 print(f"retry quiver {slug} attempt {attempt} after http {exc.code}")
                 time.sleep(delay)
                 continue
@@ -211,28 +215,38 @@ def generate_quiver_svgs(cards: Iterable[Dict[str, str]], token: str, force: boo
         raise SystemExit("\n".join(failures))
 
 
+def resolve_quiver_api_key(args: argparse.Namespace) -> Optional[str]:
+    return args.quiver_api_key or os.environ.get(QUIVER_API_KEY_ENV)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate hosted API fallback icons and Quiver SVGs.")
     parser.add_argument("--force", action="store_true", help="Regenerate existing fallback PNGs.")
     parser.add_argument("--skip-hf", action="store_true", help="Skip Hugging Face PNG fallback generation.")
     parser.add_argument(
         "--quiver-id",
-        help="Card id to generate through Quiver. Requires --quiver-token.",
+        help="Card id to generate through Quiver. Requires a Quiver API key.",
     )
     parser.add_argument(
         "--quiver-all",
         action="store_true",
-        help="Generate Quiver SVGs for all cards in the missing-card set. Requires --quiver-token.",
+        help="Generate Quiver SVGs for all cards in the missing-card set. Requires a Quiver API key.",
     )
     parser.add_argument(
+        "--quiver-api-key",
         "--quiver-token",
-        help="Quiver bearer token. Prefer passing this via the command line at runtime, not storing it.",
+        dest="quiver_api_key",
+        help=(
+            "Quiver API key. Defaults to the QUIVERAI_API_KEY environment variable. "
+            "The --quiver-token alias is kept for backward compatibility."
+        ),
     )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    quiver_api_key = resolve_quiver_api_key(args)
     cards = load_cards()
     pending = missing_cards(cards)
     print(f"missing cards: {len(pending)}")
@@ -240,11 +254,13 @@ def main() -> None:
         generate_hf_fallbacks(pending, force=args.force)
 
     if args.quiver_all or args.quiver_id:
-        if not args.quiver_token:
-            raise SystemExit("Quiver generation requires --quiver-token")
+        if not quiver_api_key:
+            raise SystemExit(
+                "Quiver generation requires --quiver-api-key, --quiver-token, or QUIVERAI_API_KEY"
+            )
 
     if args.quiver_all:
-        generate_quiver_svgs(pending, args.quiver_token, force=args.force)
+        generate_quiver_svgs(pending, quiver_api_key, force=args.force)
     elif args.quiver_id:
         try:
             card = next(card for card in pending if card["id"] == args.quiver_id)
@@ -254,7 +270,7 @@ def main() -> None:
         if svg_path.exists() and not args.force:
             print(f"skip quiver {svg_path.stem}")
             return
-        generate_quiver_svg(card, args.quiver_token)
+        generate_quiver_svg(card, quiver_api_key)
 
 
 if __name__ == "__main__":
