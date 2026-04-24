@@ -673,8 +673,11 @@ dialog#detail[data-render-mode="scaled"] .dialog-card {
   width: var(--detail-design-width);
   height: var(--detail-design-height);
   aspect-ratio: auto;
-  margin: 0 auto;
-  transform: scale(var(--detail-scale));
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(var(--detail-scale));
   transform-origin: top center;
 }
 
@@ -842,19 +845,28 @@ dialog#detail[data-render-mode="scaled"] .dialog-card {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: var(--detail-art);
-  background-repeat: no-repeat;
-  background-position: center 44%;
-  background-size: min(44%, 190px);
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.18s ease, transform 0.18s ease;
   pointer-events: none;
 }
 
-.dialog-color[data-has-art="true"]::after {
+.dialog-art {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: min(44%, 190px);
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 6px));
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+
+.dialog-color[data-has-art="true"] .dialog-art {
   opacity: 0.96;
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
 }
 
 .dialog-color > * {

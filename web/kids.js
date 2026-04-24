@@ -57,12 +57,15 @@ function getFallbackReviewArt(card) {
 }
 
 function attachArtFallback(img, art) {
-  if (!img || !art || !art.fallbackSrc || art.fallbackSrc === art.src) return;
-  img.addEventListener("error", () => {
+  if (!img) return;
+  img.dataset.fallbackApplied = "false";
+  img.onerror = null;
+  if (!art || !art.fallbackSrc || art.fallbackSrc === art.src) return;
+  img.onerror = () => {
     if (img.dataset.fallbackApplied === "true") return;
     img.dataset.fallbackApplied = "true";
     img.src = art.fallbackSrc;
-  });
+  };
 }
 
 /* ─── Kid-friendly modality labels ─── */
@@ -371,6 +374,7 @@ function main() {
   const dlgScaleShell = $("detail-scale-shell");
   const dlgCard   = $("detail-card");
   const dlgColor  = $("detail-color");
+  const dlgArt    = document.createElement("img");
   const dlgNick   = $("detail-nickname");
   const dlgHead   = $("detail-headline");
   const dlgText   = $("detail-text");
@@ -392,6 +396,12 @@ function main() {
   const chipsAge  = $("chips-age");
   const lblAge    = $("bub-age-label");
   const ageAll    = $("age-all");
+
+  dlgArt.className = "dialog-art";
+  dlgArt.alt = "";
+  dlgArt.decoding = "async";
+  dlgArt.hidden = true;
+  dlgColor.prepend(dlgArt);
 
   let methods = [];       // from methods_bilingual.json
   let kidsCards = [];     // from kids_cards.json
@@ -743,6 +753,23 @@ function main() {
     return (text || "").split(/(?<=[\.\?\!])\s+/).slice(0, n).join(" ");
   }
 
+  function syncDetailArt(art, altText) {
+    if (!art) {
+      dlgArt.hidden = true;
+      dlgArt.removeAttribute("src");
+      dlgArt.alt = "";
+      dlgArt.onerror = null;
+      dlgColor.dataset.hasArt = "false";
+      return;
+    }
+
+    dlgArt.hidden = false;
+    dlgArt.alt = altText || "";
+    dlgArt.src = art.src;
+    attachArtFallback(dlgArt, art);
+    dlgColor.dataset.hasArt = "true";
+  }
+
   /* ─── Detail dialog ─── */
   function syncDialogNav() {
     const hasNav = activeModalCards.length > 1;
@@ -804,8 +831,7 @@ function main() {
     }
 
     dlgColor.style.backgroundColor = color;
-    dlgColor.style.setProperty("--detail-art", art ? `url(${art.fallbackSrc || art.src})` : "none");
-    dlgColor.dataset.hasArt = art ? "true" : "false";
+    syncDetailArt(art, art ? art.alt[lang] || nickname : "");
     dlgNick.textContent = nickname;
     dlgHead.textContent = headline;
 
@@ -1059,8 +1085,7 @@ function main() {
     const bodyText = cleanKidBodyText(lang === 'en' ? card.body_en : card.body_cs);
     const art = getFallbackReviewArt(card);
     dlgColor.style.backgroundColor = card.color;
-    dlgColor.style.setProperty('--detail-art', art ? `url(${art.fallbackSrc || art.src})` : 'none');
-    dlgColor.dataset.hasArt = art ? 'true' : 'false';
+    syncDetailArt(art, art ? art.alt[lang] || nick : '');
     dlgNick.textContent = nick;
     dlgHead.textContent = headline;
     dlgText.innerHTML = parseMd(bodyText);
